@@ -322,4 +322,52 @@ footer p {
     padding: 20px;
   }
 }
+/* تحسين العرض في الهواتف */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-color: #004d40; /* لون خلفي احتياطي لو الصورة غير واضحة */
+  }
+
+  .hero h2 {
+    font-size: 26px;
+    color: white;
+  }
+
+  .hero p,
+  .hero ul li {
+    font-size: 16px;
+    color: #f5f5f5;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
 
