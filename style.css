@@ -260,5 +260,34 @@ button {
   text-align: left;
   display: inline-block;
 }
+/* 🌍 Sélecteur de langue */
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.lang-switcher img {
+  width: 30px;
+  height: auto;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-switcher img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-right: 10px;
+}
+
 
 
