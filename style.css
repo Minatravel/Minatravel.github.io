@@ -312,5 +312,43 @@ footer {
   background-color: #ffc107;
   transform: scale(1.05);
 }
+/* === Animation d’apparition du texte dans le hero === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p,
+.hero li,
+.hero a.button {
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0; /* pour éviter l'affichage avant l'animation */
+}
+
+/* Délais progressifs pour chaque élément */
+.hero h1 {
+  animation-delay: 0.2s;
+}
+
+.hero p {
+  animation-delay: 0.4s;
+}
+
+.hero li {
+  animation-delay: 0.6s;
+}
+
+.hero a.button {
+  animation-delay: 0.8s;
+}
+
 
 
