@@ -242,4 +242,16 @@ button {
   font-weight: bold;
 }
 
+.contact-info {
+  background: #f9fdfc;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 80%;
+  margin: 0 auto 30px;
+  text-align: right;
+  direction: rtl;
+  font-size: 1.1rem;
+}
+
 
