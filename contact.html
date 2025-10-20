@@ -1,169 +1,88 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اتصل بنا | Mina Travel</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا - Mina Travel</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #f7f9fa;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #045c5a;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 30px;
-      gap: 25px;
-    }
-
-    .contact-box {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-      flex: 1 1 400px;
-      max-width: 500px;
-    }
-
-    h2 {
-      color: #045c5a;
-      border-right: 5px solid #f2c200;
-      padding-right: 10px;
-      font-size: 22px;
-    }
-
-    .info p {
-      font-size: 16px;
-      line-height: 1.8;
-      margin: 8px 0;
-    }
-
-    .info i {
-      color: #f72585;
-      margin-left: 8px;
-    }
-
-    .info a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    /* ✅ لإصلاح اتجاه الأرقام */
     .ltr {
       direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
       display: inline-block;
-    }
-
-    iframe {
-      width: 100%;
-      height: 220px;
-      border-radius: 10px;
-      border: none;
-      margin-top: 15px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 15px;
-      outline: none;
-    }
-
-    button {
-      background-color: #045c5a;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #037d76;
-    }
-
-    footer {
-      background-color: #045c5a;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
+  <!-- 🌍 رأس الصفحة -->
   <header>
-    Mina Travel — اتصل بنا
+    <div class="navbar">
+      <h1>Mina Travel</h1>
+
+      <nav class="nav-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="contact.html" class="active">اتصل بنا</a>
+      </nav>
+
+      <div class="lang-switcher">
+        <a href="contact.html" title="العربية">
+          <img src="https://flagcdn.com/w40/ma.png" alt="علم المغرب">
+        </a>
+        <a href="contact-fr.html" title="Français">
+          <img src="https://flagcdn.com/w40/fr.png" alt="Drapeau France">
+        </a>
+      </div>
+    </div>
   </header>
 
-  <div class="container">
-    <!-- صندوق التواصل -->
-    <div class="contact-box info">
-      <h2>معلومات التواصل</h2>
+  <!-- ✉️ قسم الاتصال -->
+  <section class="contact-section">
+    <h2>تواصل معنا</h2>
+    <p>يسعدنا استقبال جميع استفساراتكم حول خدمات الحج والعمرة والزيارات الدينية.</p>
 
-      <p><i class="fas fa-map-marker-alt"></i> <strong>العنوان (المغرب):</strong> Avenue Hassan II, Temara Centre 12000</p>
-      <p><i class="fas fa-map-marker-alt"></i> <strong>العنوان (بلجيكا):</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📍 مكتبنا في المغرب</h3>
+        <p>شارع الحسن الثاني، تمارة المركز 12000</p>
+        <p>📞 <span class="ltr">+212 661 865 316</span></p>
+      </div>
 
-      <p><i class="fas fa-phone"></i> <strong>هاتف المغرب:</strong> <span class="ltr">+212 661 865 316</span></p>
-      <p><i class="fas fa-phone"></i> <strong>هاتف بلجيكا:</strong> <span class="ltr">+32 487 491 576</span></p>
+      <div class="contact-card">
+        <h3>📍 مكتبنا في بلجيكا</h3>
+        <p>Rue de Fiennes 46, 1070 Anderlecht</p>
+        <p>📞 <span class="ltr">+32 487 491 576</span></p>
+      </div>
 
-      <p><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> 
-        <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a>
-      </p>
-
-      <iframe src="https://www.google.com/maps?q=Avenue+Hassan+II,+Temara,+Morocco&output=embed"></iframe>
+      <div class="contact-card">
+        <h3>📧 البريد الإلكتروني</h3>
+        <p>minatravel2019@gmail.com</p>
+      </div>
     </div>
 
-    <!-- نموذج الرسالة -->
-    <div class="contact-box">
-      <h2>أرسل لنا رسالة</h2>
-      <form>
-        <label>الاسم الكامل:</label>
-        <input type="text" placeholder="اكتب اسمك هنا" required>
-        
-        <label>البريد الإلكتروني:</label>
-        <input type="email" placeholder="example@email.com" required>
-        
-        <label>رقم الهاتف:</label>
-        <input type="text" placeholder="+212..." required>
-        
-        <label>الرسالة:</label>
-        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-        
-        <button type="submit">📩 إرسال الرسالة</button>
-      </form>
-    </div>
-  </div>
+    <form class="contact-form">
+      <label for="name">الاسم الكامل</label>
+      <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
 
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+
+      <label for="message">الرسالة</label>
+      <textarea id="message" name="message" rows="5" placeholder="أدخل رسالتك هنا..." required></textarea>
+
+      <button type="submit" class="btn-gold">إرسال الرسالة</button>
+    </form>
+  </section>
+
+  <!-- 🌙 تذييل الصفحة -->
   <footer>
-    © 2025 Mina Travel | جميع الحقوق محفوظة
+    <p><strong>مكتبنا في المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
+    <p><strong>مكتبنا في بلجيكا:</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
+    <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
+    <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
-  <!-- مكتبة أيقونات -->
-  <script src="https://kit.fontawesome.com/a2e0e6ad44.js" crossorigin="anonymous"></script>
 </body>
 </html>
