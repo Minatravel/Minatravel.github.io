@@ -1,145 +1,160 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا - Mina Travel</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا | Mina Travel</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #f6fbfa;
+      background-color: #f7f9fa;
       margin: 0;
       padding: 0;
-      direction: rtl;
-      text-align: right;
     }
 
     header {
-      background-color: #00695c;
+      background-color: #045c5a;
       color: white;
-      padding: 15px 0;
       text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 30px;
+      gap: 25px;
     }
 
-    h2, h3 {
-      color: #004d40;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .contact-info {
-      background: #f9fdfc;
+    .contact-box {
+      background: white;
       border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       padding: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 85%;
-      margin: 0 auto 30px;
-      text-align: right;
-      direction: rtl;
-      font-size: 1.1rem;
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    h2 {
+      color: #045c5a;
+      border-right: 5px solid #f2c200;
+      padding-right: 10px;
+      font-size: 22px;
+    }
+
+    .info p {
+      font-size: 16px;
       line-height: 1.8;
+      margin: 8px 0;
+    }
+
+    .info i {
+      color: #f72585;
+      margin-left: 8px;
+    }
+
+    .info a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 15px;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
     input, textarea {
-      padding: 12px;
-      border-radius: 8px;
+      padding: 10px;
       border: 1px solid #ccc;
-      font-size: 1rem;
-      width: 100%;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
     }
 
     button {
-      background-color: #00796b;
+      background-color: #045c5a;
       color: white;
-      border: none;
       padding: 12px;
+      border: none;
       border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
 
     button:hover {
-      background-color: #004d40;
+      background-color: #037d76;
+    }
+
+    footer {
+      background-color: #045c5a;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>Mina Travel</h1>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="index.html#about">من نحن</a>
-      <a href="index.html#services">خدماتنا</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
+    Mina Travel — اتصل بنا
   </header>
 
   <div class="container">
-    <h2>اتصل بنا</h2>
-    <div class="contact-info">
-      <h3>معلومات التواصل</h3>
-
-      <p>🇲🇦 <strong>مكتب المغرب:</strong><br>
-      Avenue Hassan II, Temara Centre 12000<br>
-      ☎️ <b>+212 661 865 316</b></p>
-
-      <p>🇧🇪 <strong>مكتب بروكسل:</strong><br>
-      Rue de Fiennes 46, 1070 Anderlecht, Belgique<br>
-      ☎️ <b>+32 487 491 576</b></p>
-
-      <p>✉️ <strong>البريد الإلكتروني:</strong>
-        <a href="mailto:minatravel2019@gmail.com" style="color:#00796b; text-decoration:none;">
-          minatravel2019@gmail.com
-        </a>
+    <!-- صندوق التواصل -->
+    <div class="contact-box info">
+      <h2>معلومات التواصل</h2>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>العنوان (المغرب):</strong> Avenue Hassan II, Temara Centre 12000</p>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>العنوان (بلجيكا):</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+      <p><i class="fas fa-phone"></i> <strong>هاتف المغرب:</strong> +212 661 865 316</p>
+      <p><i class="fas fa-phone"></i> <strong>هاتف بلجيكا:</strong> +32 487 491 576</p>
+      <p><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> 
+        <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a>
       </p>
+
+      <iframe src="https://www.google.com/maps?q=Avenue+Hassan+II,+Temara,+Morocco&output=embed"></iframe>
     </div>
 
-    <form>
-      <label>الاسم الكامل:</label>
-      <input type="text" placeholder="اكتب اسمك هنا">
-
-      <label>البريد الإلكتروني:</label>
-      <input type="email" placeholder="example@gmail.com">
-
-      <label>رقم الهاتف:</label>
-      <input type="tel" placeholder="+212...">
-
-      <label>الرسالة:</label>
-      <textarea rows="5" placeholder="اكتب رسالتك هنا..."></textarea>
-
-      <button type="submit">إرسال</button>
-    </form>
+    <!-- نموذج الرسالة -->
+    <div class="contact-box">
+      <h2>أرسل لنا رسالة</h2>
+      <form>
+        <label>الاسم الكامل:</label>
+        <input type="text" placeholder="اكتب اسمك هنا" required>
+        
+        <label>البريد الإلكتروني:</label>
+        <input type="email" placeholder="example@email.com" required>
+        
+        <label>رقم الهاتف:</label>
+        <input type="text" placeholder="+212..." required>
+        
+        <label>الرسالة:</label>
+        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        
+        <button type="submit">📩 إرسال الرسالة</button>
+      </form>
+    </div>
   </div>
 
+  <footer>
+    © 2025 Mina Travel | جميع الحقوق محفوظة
+  </footer>
+
+  <!-- مكتبة أيقونات -->
+  <script src="https://kit.fontawesome.com/a2e0e6ad44.js" crossorigin="anonymous"></script>
 </body>
 </html>
