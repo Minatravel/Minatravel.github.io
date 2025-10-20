@@ -366,6 +366,33 @@ footer {
     filter: brightness(0.7) blur(0);
   }
 }
+/* === تحسين زر احجز الآن === */
+.cta-button {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تأثير عند تمرير الفأرة */
+.cta-button:hover {
+  background-color: #ffd633;
+  transform: scale(1.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير عند الضغط */
+.cta-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
