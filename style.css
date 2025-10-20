@@ -285,4 +285,32 @@ footer {
     background-attachment: scroll; /* le parallax peut causer des bugs sur mobile */
   }
 }
+/* === Lisibilité du texte sur la section hero === */
+.hero h1,
+.hero h2,
+.hero p,
+.hero li {
+  color: #fff !important; /* يجعل النص أبيض بالكامل */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* ظل خفيف للنص لزيادة الوضوح */
+}
+
+/* تحكم خاص بالزر */
+.hero button,
+.hero a.button {
+  background-color: #ffca28;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.hero button:hover,
+.hero a.button:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
 
