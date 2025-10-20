@@ -254,4 +254,11 @@ button {
   font-size: 1.1rem;
 }
 
+.ltr {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  text-align: left;
+  display: inline-block;
+}
+
 
