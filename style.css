@@ -1,293 +1,264 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
+/* 🌍 إعداد عام */
 body {
-  font-family: 'Cairo', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f8f9;
-  color: #222;
-  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
 }
 
-/* ---------------- HEADER ---------------- */
+/* 🟢 الرأس */
 header {
-  background: linear-gradient(90deg, #006c6c, #009688);
+  background-color: #00695c;
   color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #ffe082;
-  border-bottom: 2px solid #ffe082;
-  padding-bottom: 2px;
-}
-
-/* ---------------- HERO SECTION ---------------- */
-.hero {
-  background: linear-gradient(180deg, #009688, #4db6ac);
-  color: white;
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* ---------------- CONTENT SECTIONS ---------------- */
-section.content {
-  padding: 3rem 1rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-section.content h3 {
-  color: #006c6c;
-  margin-bottom: 0.5rem;
-}
-
-section.content p {
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-
-section.content ul {
-  list-style-type: circle;
-  margin-right: 20px;
-}
-
-/* ---------------- GRID LAYOUT (خدمات) ---------------- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.grid div {
-  background: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.grid div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* ---------------- CONTACT FORM ---------------- */
-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: 'Cairo', sans-serif;
-}
-
-button {
-  background: #009688;
-  color: white;
-  border: none;
-/* ---------------- OFFERS SECTION ---------------- */
-.offers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.offer {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
-.offer img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.offer h4 {
-  color: #006c6c;
-  margin: 1rem 0 0.5rem;
-  font-size: 1.3rem;
-}
-
-.offer p {
-  padding: 0 1rem;
-  color: #444;
-  font-size: 0.95rem;
-  min-height: 60px;
-}
-
-.offer .price {
-  display: block;
-  margin: 0.5rem 0;
-  font-weight: bold;
-  color: #009688;
-  font-size: 1.1rem;
-}
-
-.offer button {
-  background: #009688;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.offer button:hover {
-  background: #00796b;
-}
-
-.offer:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-/* ---------------- UMRAH SECTION ---------------- */
-.umrah-section {
-  background: linear-gradient(to right, #e0f7f4, #f5fffe);
-  padding: 4rem 2rem;
-  border-radius: 12px;
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.umrah-section h3 {
-  color: #006c6c;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.umrah-section .intro {
-  color: #444;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.umrah-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.umrah-item {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  font-weight: 600;
-  color: #004d4d;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.umrah-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.umrah-section .closing {
-  margin-top: 2.5rem;
-  font-size: 1.2rem;
-  color: #00796b;
-  font-weight: bold;
-}
-
-.contact-info {
-  background: #f9fdfc;
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 80%;
-  margin: 0 auto 30px;
-  text-align: right;
-  direction: rtl;
-  font-size: 1.1rem;
-}
-
-.ltr {
-  direction: ltr;
-  unicode-bidi: bidi-override;
-  text-align: left;
-  display: inline-block;
-}
-/* 🌍 Sélecteur de langue */
-.lang-switcher {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.lang-switcher img {
-  width: 30px;
-  height: auto;
-  border-radius: 4px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.lang-switcher img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
 .nav-links a {
-  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700;
+}
 
+.lang-switcher img {
+  width: 35px;
+  height: auto;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.3s;
+}
 
+.lang-switcher img:hover {
+  transform: scale(1.1);
+}
+
+/* 🌙 قسم البداية (Hero) */
+.hero {
+  background: url('https://i.imgur.com/lLYzWwO.jpg') center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 25px;
+}
+
+.hero ul li {
+  margin: 5px 0;
+}
+
+/* زر ذهبي */
+.btn-gold {
+  background-color: #ffd700;
+  color: #00695c;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-gold:hover {
+  background-color: #ffcc00;
+  color: #004d40;
+}
+
+/* 🕋 قسم الخدمات */
+.services {
+  background-color: #fff;
+  padding: 60px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+.services h2 {
+  color: #00695c;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.services ul li {
+  background-color: #e0f2f1;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.services ul li:hover {
+  background-color: #b2dfdb;
+}
+
+/* 💎 قسم العروض */
+.offers {
+  background-color: #fafafa;
+  padding: 60px 20px;
+}
+
+.offers h2 {
+  color: #00695c;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.offers p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  font-size: 17px;
+}
+
+/* ✉️ صفحة الاتصال */
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-section h2 {
+  color: #00695c;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  margin: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* نموذج الاتصال */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  text-align: right;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #00695c;
+  font-weight: bold;
+  text-align: right;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  background-color: #ffd700;
+  color: #00695c;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ffcc00;
+}
+
+/* 🌙 التذييل */
+footer {
+  background-color: #004d40;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* 📱 تصميم متجاوب */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
