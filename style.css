@@ -221,3 +221,25 @@ footer {
     width: 90%;
   }
 }
+/* --- إصلاح عرض الخلفية على الحاسوب --- */
+.hero {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* تجعل الصورة ثابتة عند التمرير */
+  height: 100vh;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* لإخفاء الطبقة الرمادية القديمة إن كانت تغطي الصورة كليًا */
+.hero::before {
+  background-color: rgba(0, 0, 0, 0.35); /* تخفيف الظل لظهور الصورة أكثر */
+}
+
