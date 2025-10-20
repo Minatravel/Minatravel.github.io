@@ -1,22 +1,30 @@
-/* Style général */
-body {
-  font-family: "Cairo", sans-serif;
+/* إعدادات عامة */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
   direction: rtl;
 }
 
-/* En-tête */
+/* ===== رأس الصفحة (Header) ===== */
 header {
   background-color: #00695c;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
-/* Navigation */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===== القائمة ===== */
 nav {
   background-color: #00796b;
   text-align: center;
@@ -28,136 +36,188 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  color: #fdd835;
+  color: #ffd54f;
 }
 
-/* Section principale */
+/* ===== أعلام اللغة ===== */
+.lang-switch {
+  margin-top: 5px;
+}
+
+.lang-switch img {
+  width: 35px;
+  height: 25px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.lang-switch img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== قسم البطل (Hero Section) ===== */
 .hero {
-  position: relative;
-  background-image: url("photo_2025-10-21_00-41-56.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 100vh;
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* طبقة داكنة خفيفة فوق الصورة */
 .hero::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.hero h1,
-.hero p,
-.hero a {
-  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
-.hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+/* النصوص فوق الصورة */
+.hero h2,
+.hero p,
+.hero button {
+  position: relative;
+  z-index: 2;
 }
 
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.hero a {
-  display: inline-block;
-  background-color: #fdd835;
-  color: black;
-  padding: 12px 24px;
-  border-radius: 25px;
-  text-decoration: none;
+/* العنوان */
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
   font-weight: bold;
-  transition: background-color 0.3s;
 }
 
-.hero a:hover {
-  background-color: #fbc02d;
+/* النص */
+.hero p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
-/* Section services et offres */
+/* الزر */
+.hero button {
+  background-color: #ffd54f;
+  color: #004d40;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background-color: #ffca28;
+}
+
+/* ===== الأقسام العامة ===== */
 section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+}
+
+h3 {
+  color: #004d40;
+  margin-bottom: 30px;
+}
+
+/* ===== صناديق المحتوى ===== */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
   background-color: white;
-  margin: 20px 0;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-h2 {
-  color: #00695c;
-  margin-bottom: 20px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Pied de page */
+/* ===== نموذج الاتصال ===== */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #00695c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #004d40;
+}
+
+/* ===== الفوتر ===== */
 footer {
   background-color: #004d40;
   color: white;
   text-align: center;
-  padding: 15px 10px;
+  padding: 20px;
+  margin-top: 30px;
 }
 
-/* Classe pour forcer les chiffres LTR */
+/* ===== للأرقام (LTR) ===== */
 .ltr {
   direction: ltr;
+  text-align: left;
   display: inline-block;
 }
 
-/* ---- Bouton retour en haut ---- */
-#backToTop {
-  display: none;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #facc15; /* jaune du bouton "احجز الآن" */
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 999;
-}
-
-#backToTop:hover {
-  background-color: #fbbf24;
-  transform: scale(1.1);
-}
-
-/* Responsive */
+/* ===== تحسين العرض على الجوال ===== */
 @media (max-width: 768px) {
-  nav a {
-    display: inline-block;
-    margin: 8px;
+  nav {
+    padding: 8px 0;
   }
 
-  .hero h1 {
-    font-size: 1.8em;
+  .hero h2 {
+    font-size: 1.5rem;
   }
 
   .hero p {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
-  .hero {
-    padding: 80px 15px;
+  .card {
+    width: 90%;
   }
 }
