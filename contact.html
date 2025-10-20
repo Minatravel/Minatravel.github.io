@@ -6,26 +6,46 @@
   <title>اتصل بنا | Mina Travel</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      background-color: #f4f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004e64;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
     .contact-container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 50px auto;
       background: #fff;
-      border-radius: 10px;
+      border-radius: 15px;
       padding: 30px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       text-align: right;
     }
     .contact-container img {
-      width: 150px;
+      width: 160px;
       display: block;
       margin: 0 auto 20px;
     }
     .contact-container h2 {
       color: #004e64;
+      text-align: center;
     }
     .contact-info {
       margin: 20px 0;
       line-height: 1.8;
+      text-align: center;
     }
     form input, form textarea {
       width: 100%;
@@ -33,7 +53,6 @@
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 8px;
-      font-family: "Cairo", sans-serif;
     }
     form button {
       background-color: #008793;
@@ -43,38 +62,56 @@
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      display: block;
+      margin: 10px auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 15px;
+      background: #004e64;
+      color: white;
+      border-radius: 0 0 10px 10px;
+    }
+    .whatsapp-buttons a {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.3s;
+    }
+    .whatsapp-buttons a:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>اتصل بنا - Mina Travel</h1>
+    <h1>Mina Travel - اتصل بنا</h1>
     <nav>
       <a href="index.html">الرئيسية</a>
       <a href="contact.html">اتصل بنا</a>
     </nav>
   </header>
- <div style="margin-top: 20px; text-align: center;">
-  <a href="https://wa.me/32487491576" target="_blank" 
-     style="background-color:#25D366; color:white; padding:10px 20px; border-radius:10px; text-decoration:none; font-weight:bold;">
-    💬 تواصل عبر واتساب (بلجيكا)
-  </a>
-  <br><br>
-  <a href="https://wa.me/212661865316" target="_blank" 
-     style="background-color:#25D366; color:white; padding:10px 20px; border-radius:10px; text-decoration:none; font-weight:bold;">
-    💬 تواصل عبر واتساب (المغرب)
-  </a>
-</div>
 
   <div class="contact-container">
-    <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار Mina Travel" />
+    <img src="photo_2025-10-20_19-13-26.jpg" alt="شعار Mina Travel" />
 
     <h2>تواصل معنا</h2>
+
     <div class="contact-info">
       <p>📧 البريد الإلكتروني: <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a></p>
       <p>🇧🇪 بلجيكا: <span dir="ltr">+32 487 49 15 76</span></p>
-<p>🇲🇦 المغرب: <span dir="ltr">+212 661 86 53 16</span></p>
+      <p>🇲🇦 المغرب: <span dir="ltr">+212 661 86 53 16</span></p>
+    </div>
 
+    <div class="whatsapp-buttons">
+      <a href="https://wa.me/32487491576" target="_blank">💬 واتساب (بلجيكا)</a>
+      <a href="https://wa.me/212661865316" target="_blank">💬 واتساب (المغرب)</a>
     </div>
 
     <form action="mailto:minatravel2019@gmail.com" method="post" enctype="text/plain">
@@ -83,6 +120,14 @@
       <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
       <button type="submit">إرسال</button>
     </form>
+
+    <div style="margin-top: 40px; text-align: center;">
+      <h3>📍 موقعنا على الخريطة</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=Casablanca%2C%20Morocco&output=embed" 
+        width="100%" height="300" style="border-radius:10px; border:0;">
+      </iframe>
+    </div>
   </div>
 
   <footer>
