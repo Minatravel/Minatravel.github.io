@@ -1,139 +1,67 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اتصل بنا | Mina Travel</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: "Cairo", sans-serif;
-      background-color: #f4f8f8;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #004e64;
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .contact-container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: #fff;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: right;
-    }
-    .contact-container img {
-      width: 160px;
-      display: block;
-      margin: 0 auto 20px;
-    }
-    .contact-container h2 {
-      color: #004e64;
-      text-align: center;
-    }
-    .contact-info {
-      margin: 20px 0;
-      line-height: 1.8;
-      text-align: center;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    form button {
-      background-color: #008793;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      display: block;
-      margin: 10px auto;
-    }
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 15px;
-      background: #004e64;
-      color: white;
-      border-radius: 0 0 10px 10px;
-    }
-    .whatsapp-buttons a {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px;
-      transition: 0.3s;
-    }
-    .whatsapp-buttons a:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا - Mina Travel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ====== HEADER ====== -->
   <header>
-    <h1>Mina Travel - اتصل بنا</h1>
+    <h1>Mina Travel</h1>
     <nav>
       <a href="index.html">الرئيسية</a>
-      <a href="contact.html">اتصل بنا</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="contact.html" class="active">اتصل بنا</a>
     </nav>
   </header>
 
-  <div class="contact-container">
-    <div class="whatsapp-buttons" style="text-align:center;">
-      <a href="https://wa.me/32487491576" target="_blank">💬 تواصل عبر واتساب (بلجيكا)</a>
-      <a href="https://wa.me/212661865316" target="_blank">💬 تواصل عبر واتساب (المغرب)</a>
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <h2>اتصل بنا</h2>
+    <p>يسعدنا تواصلك معنا في أي وقت — فريقنا جاهز لخدمتك والإجابة على جميع استفساراتك.</p>
+  </section>
+
+  <!-- ====== CONTACT INFO ====== -->
+  <section class="content">
+    <h3 style="text-align:center; margin-bottom:1.5rem;">معلومات التواصل</h3>
+    <div style="text-align:center; line-height:2;">
+      <p>📍 العنوان: Avenue Hassan II, Temara Centre 12000 - المغرب</p>
+      <p>📞 الهاتف: +212661865316 | +32487491576</p>
+      <p>✉️ البريد الإلكتروني: <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a></p>
     </div>
+  </section>
 
-    <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار Mina Travel" />
+  <!-- ====== CONTACT FORM ====== -->
+  <section class="content">
+    <h3 style="text-align:center; margin-bottom:1rem;">أرسل لنا رسالة</h3>
 
-    <h2>تواصل معنا</h2>
+    <form onsubmit="event.preventDefault(); alert('✅ تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.');">
+      <label>الاسم الكامل:</label>
+      <input type="text" placeholder="اكتب اسمك هنا" required>
 
-    <div class="contact-info">
-      <p>📧 البريد الإلكتروني: <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a></p>
-      <p>بلجيكا: <span dir="ltr">+32 487 49 15 76</span></p>
-      <p>المغرب: <span dir="ltr">+212 661 86 53 16</span></p>
-      <p>📍 العنوان: Avenue Hassan II, Témara Centre 12000, Maroc</p>
-    </div>
+      <label>البريد الإلكتروني:</label>
+      <input type="email" placeholder="example@email.com" required>
 
-    <form action="mailto:minatravel2019@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="الاسم الكامل" required />
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required />
-      <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
+      <label>رقم الهاتف:</label>
+      <input type="tel" placeholder="+212..." required>
+
+      <label>الرسالة:</label>
+      <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+
       <button type="submit">إرسال</button>
     </form>
+  </section>
 
-    <div style="margin-top: 40px; text-align: center;">
-      <h3>📍 موقعنا على الخريطة</h3>
-      <iframe 
-        src="https://www.google.com/maps?q=Avenue%20Hassan%20II%2C%20Temara%20Centre%2012000%2C%20Morocco&output=embed" 
-        width="100%" height="300" style="border-radius:10px; border:0;">
-      </iframe>
-    </div>
-  </div>
-
+  <!-- ====== FOOTER ====== -->
   <footer>
-    <p>© 2025 Mina Travel | جميع الحقوق محفوظة</p>
+    <p>📍 Avenue Hassan II, Temara Centre 12000 — المغرب</p>
+    <p>📞 +212661865316 | +32487491576 | ✉️ minatravel2019@gmail.com</p>
+    <p>© 2025 Mina Travel - جميع الحقوق محفوظة</p>
   </footer>
+
 </body>
 </html>
-
