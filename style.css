@@ -191,4 +191,55 @@ button {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
+/* ---------------- UMRAH SECTION ---------------- */
+.umrah-section {
+  background: linear-gradient(to right, #e0f7f4, #f5fffe);
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.umrah-section h3 {
+  color: #006c6c;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.umrah-section .intro {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.umrah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.umrah-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 600;
+  color: #004d4d;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.umrah-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.umrah-section .closing {
+  margin-top: 2.5rem;
+  font-size: 1.2rem;
+  color: #00796b;
+  font-weight: bold;
+}
+
 
