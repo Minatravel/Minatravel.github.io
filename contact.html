@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اتصل بنا | Mina Travel</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: right;
+    }
+    .contact-container img {
+      width: 150px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .contact-container h2 {
+      color: #004e64;
+    }
+    .contact-info {
+      margin: 20px 0;
+      line-height: 1.8;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: "Cairo", sans-serif;
+    }
+    form button {
+      background-color: #008793;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>اتصل بنا - Mina Travel</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+  </header>
+
+  <div class="contact-container">
+    <img src="photo_2025-10-20_19-13-26.jpg" alt="شعار Mina Travel" />
+
+    <h2>تواصل معنا</h2>
+    <div class="contact-info">
+      <p>📧 البريد الإلكتروني: <a href="mailto:minatravel2019@gmail.com">minatravel2019@gmail.com</a></p>
+      <p>📞 بلجيكا: +32 487 49 15 76</p>
+      <p>📞 المغرب: +212 661 86 53 16</p>
+    </div>
+
+    <form action="mailto:minatravel2019@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="الاسم الكامل" required />
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+      <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Mina Travel | جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>
