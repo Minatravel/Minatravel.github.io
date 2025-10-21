@@ -6,132 +6,89 @@
   <title>Mina Travel - Hajj & Omra</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .ltr { direction: ltr; unicode-bidi: bidi-override; text-align: left; display: inline-block; }
-    body { margin: 0; font-family: Arial, sans-serif; opacity: 0; transition: opacity 0.5s; }
-
-    header {
-      background-color: #006b5b;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      width: 50px;
-      height: 50px;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover, nav a.active {
-      color: #ffcc00;
-    }
-
-    .lang-switch {
-      display: flex;
-      gap: 8px;
-    }
-
-    .lang-btn {
-      background: white;
-      color: black;
-      padding: 4px 10px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .hero {
-      background: url('background.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .btn-gold {
-      background: #ffcc00;
-      color: black;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
     }
   </style>
 </head>
-
 <body>
-<header>
-  <div class="logo-container">
-    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-    <h1>Mina Travel</h1>
-  </div>
 
-  <nav>
-    <a href="index-fr.html" class="active">Accueil</a>
-    <a href="services.html">Nos Services</a>
-    <a href="offers.html">Nos Offres</a>
-    <a href="contact-fr.html">Contact</a>
-  </nav>
+  <!-- 🌍 En-tête -->
+  <header>
+    <div class="navbar">
+      <div class="lang-switch">
+        <a href="index.html" class="lang-btn">AR</a>
+        <a href="index-fr.html" class="lang-btn">FR</a>
+      </div>
 
-  <div class="lang-switch">
-    <a href="index.html" class="lang-btn">AR</a>
-    <a href="index-fr.html" class="lang-btn">FR</a>
-  </div>
-</header>
+      <div class="logo-container">
+        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+        <h1>Mina Travel</h1>
+      </div>
 
-<section class="hero">
-  <h2>Votre voyage pour la Omra commence avec nous !</h2>
-  <p>Nous vous offrons tout ce dont vous avez besoin :</p>
-  <ul>
-    <li>Encadrement par un guide religieux expérimenté</li>
-    <li>Visa Omra ou visa touristique</li>
-    <li>Réservation d’hôtels et de vols</li>
-    <li>Transferts confortables depuis et vers l’aéroport</li>
-    <li>Omra par procuration pour les malades ou les défunts</li>
-    <li>Visites religieuses et historiques</li>
-    <li>Assistance aux hommes d’affaires</li>
-  </ul>
-  <p>Avec nous... votre sérénité et votre adoration sont notre priorité 🌙</p>
+      <nav>
+        <a href="index-fr.html" class="active">Accueil</a>
+        <a href="#services">Nos Services</a>
+        <a href="#offers">Nos Offres</a>
+        <a href="contact-fr.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <a href="contact-fr.html" class="btn-gold">Réserver maintenant</a>
-</section>
+  <!-- ✨ Section principale -->
+  <section class="hero">
+    <h2>Votre voyage pour la Omra commence avec nous !</h2>
+    <p>Nous vous offrons tout ce dont vous avez besoin :</p>
+    <ul>
+      <li>Encadrement par un guide religieux expérimenté</li>
+      <li>Visa Omra ou visa touristique</li>
+      <li>Réservation d’hôtels et de vols</li>
+      <li>Transferts confortables depuis et vers l’aéroport</li>
+      <li>Omra par procuration pour les malades ou les défunts</li>
+      <li>Visites religieuses et historiques</li>
+      <li>Assistance aux hommes d’affaires</li>
+    </ul>
+    <p>Avec nous... votre sérénité et votre adoration sont notre priorité 🌙</p>
 
-<footer>
-  <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-  <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-  <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
-  <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
-  <p>📧 minatravel2019@gmail.com</p>
-</footer>
+    <a href="contact-fr.html" class="btn-gold">Réserver maintenant</a>
+  </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = "1";
-  });
-</script>
+  <!-- 🕋 Nos Services -->
+  <section id="services" class="services">
+    <h2>Nos Services</h2>
+    <ul>
+      <li>Visa Omra et visa touristique</li>
+      <li>Réservation d’hôtels et de vols</li>
+      <li>Transferts confortables depuis et vers l’aéroport</li>
+      <li>Omra par procuration pour les malades et défunts</li>
+      <li>Visites religieuses et historiques</li>
+    </ul>
+  </section>
+
+  <!-- 💎 Nos Offres -->
+  <section id="offers" class="offers">
+    <h2>Nos Offres</h2>
+    <p>Profitez dès maintenant de réductions spéciales sur nos programmes de Omra pour le mois de Ramadan !</p>
+    <a href="contact-fr.html" class="btn-gold">Réserver une offre</a>
+  </section>
+
+  <!-- 🌙 Pied de page -->
+  <footer>
+    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
+    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
+    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
+    <p>📧 minatravel2019@gmail.com</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "1";
+    });
+  </script>
 
 </body>
 </html>
