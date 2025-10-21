@@ -3,28 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مِنى ترافل - العمرة والحج</title>
+  <title>مِنى ترافل - الحج والعمرة</title>
   <link rel="stylesheet" href="style.css">
-
   <style>
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
-    }
+    body { font-family: "Cairo", sans-serif; margin: 0; background-color: #f4f4f4; opacity: 0; transition: opacity 0.5s; }
+    header { background-color: #006b5b; padding: 10px 40px; color: white; }
+    .header-container { display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; }
+    .logo-container { display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; }
+    .logo { height: 50px; }
+    nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    nav a.active { color: #FFD700; }
+    .lang-switch a { background-color: white; color: black; padding: 5px 10px; border-radius: 5px; text-decoration: none; margin-left: 5px; font-weight: bold; }
+    section { padding: 40px; text-align: center; }
+    .btn-gold { background-color: #FFD700; color: black; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    footer { background-color: #333; color: white; text-align: center; padding: 20px; line-height: 1.8; }
+    .ltr { direction: ltr; unicode-bidi: bidi-override; display: inline-block; }
   </style>
 </head>
-
 <body>
-  <!-- ✅ رأس الصفحة -->
   <header>
-    <div class="navbar">
+    <div class="header-container">
+      <!-- Logo -->
       <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار مِنى ترافل" class="logo">
-        <h1>Mina Travel</h1>
+        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+        <h1>مِنى ترافل</h1>
       </div>
 
+      <!-- Navigation -->
       <nav>
         <a href="index.html" class="active">الرئيسية</a>
         <a href="#services">خدماتنا</a>
@@ -32,64 +37,57 @@
         <a href="contact.html">اتصل بنا</a>
       </nav>
 
+      <!-- Langues -->
       <div class="lang-switch">
-        <a href="index.html" class="lang-btn">AR</a>
-        <a href="index-fr.html" class="lang-btn">FR</a>
+        <a href="index.html">AR</a>
+        <a href="index-fr.html">FR</a>
       </div>
     </div>
   </header>
 
-  <!-- ✨ القسم الرئيسي -->
   <section class="hero">
     <h2>رحلتك للعمرة تبدأ معنا!</h2>
-    <p>نحن نقدم لك كل ما تحتاجه لرحلة مريحة وميسّرة:</p>
-    <ul>
-      <li>تأطير من طرف مرشد ديني ذو خبرة</li>
+    <p>نحن نقدم لك كل ما تحتاجه:</p>
+    <ul style="list-style: none; padding: 0;">
+      <li>تأطير من مرشد ديني ذو خبرة</li>
       <li>تأشيرة عمرة أو تأشيرة سياحية</li>
-      <li>حجز الفنادق وتذاكر الطيران</li>
+      <li>حجوزات الفنادق والرحلات الجوية</li>
       <li>نقل مريح من وإلى المطار</li>
-      <li>العمرة بالنيابة عن المرضى أو المتوفين</li>
+      <li>عمرة بالنيابة عن المرضى أو المتوفين</li>
       <li>زيارات دينية وتاريخية</li>
       <li>مساعدة رجال الأعمال</li>
     </ul>
     <p>معنا... راحتك وعبادتك أولويتنا 🌙</p>
-
-    <a href="contact.html" class="cta-button">احجز الآن</a>
+    <a href="contact.html" class="btn-gold">احجز الآن</a>
   </section>
 
-  <!-- 🕋 خدماتنا -->
-  <section id="services" class="services">
+  <section id="services">
     <h2>خدماتنا</h2>
-    <ul>
+    <ul style="list-style: none; padding: 0;">
       <li>تأشيرات العمرة والسياحة</li>
       <li>حجوزات الفنادق والطيران</li>
-      <li>خدمات النقل المريحة من وإلى المطار</li>
-      <li>العمرة بالنيابة عن المرضى أو المتوفين</li>
+      <li>نقل مريح من وإلى المطار</li>
+      <li>عمرة بالنيابة عن المرضى والمتوفين</li>
       <li>زيارات دينية وتاريخية</li>
     </ul>
   </section>
 
-  <!-- 💎 عروضنا -->
-  <section id="offers" class="offers">
+  <section id="offers">
     <h2>عروضنا</h2>
-    <p>استفد الآن من التخفيضات الخاصة على برامج العمرة لشهر رمضان المبارك!</p>
-    <a href="contact.html" class="cta-button">احجز عرضك الآن</a>
+    <p>اغتنم الآن تخفيضات خاصة على برامج العمرة لشهر رمضان!</p>
+    <a href="contact.html" class="btn-gold">احجز عرضك الآن</a>
   </section>
 
-  <!-- 🌙 الفوتر -->
   <footer>
-    <p><strong>المكتب في المغرب:</strong> شارع الحسن الثاني، تمارة سنتر 12000</p>
-    <p><strong>المكتب في بلجيكا:</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p><strong>مكتب المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
+    <p><strong>مكتب بلجيكا:</strong> شارع دو فيين 46، 1070 أندرلخت</p>
     <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
     <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
-  <!-- ✅ تفعيل الانتقال السلس -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
+    document.addEventListener("DOMContentLoaded", () => { document.body.style.opacity = "1"; });
   </script>
 </body>
 </html>
