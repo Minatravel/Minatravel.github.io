@@ -3,232 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina Travel - Omra, Hajj & Séjours Halal</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Mina Travel | Voyages Halal</title>
   <style>
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
-      background-attachment: fixed;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
+      background-color: #fff;
+      color: #333;
     }
 
+    /* Bande supérieure */
     .top-banner {
-      background: linear-gradient(to right, #fff8dc, #d4af37);
-      color: #222;
+      background: linear-gradient(to right, #e9d89a, #c6a43d);
+      color: #000;
       text-align: center;
-      font-weight: 600;
       padding: 8px 0;
+      font-weight: 600;
       font-size: 15px;
-      letter-spacing: 1px;
-      animation: fadeIn 2s ease;
+      letter-spacing: 0.5px;
     }
 
+    /* En-tête */
     header {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 15px 40px;
+      background-color: #444;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 10px 40px;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      width: 70px;
-      height: auto;
+    header img {
+      height: 55px;
+      margin-right: 10px;
       border-radius: 10px;
     }
 
     nav a {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       margin: 0 15px;
       font-weight: 500;
       transition: color 0.3s;
     }
 
-    nav a:hover, nav a.active {
+    nav a:hover {
       color: #d4af37;
     }
 
-    .lang-switch {
-      display: flex;
-      gap: 8px;
-      position: absolute;
-      right: 20px;
-    }
-
-    .lang-btn {
-      border: 1px solid #d4af37;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: all 0.3s;
-    }
-
-    .lang-btn:hover {
-      background: #d4af37;
-      color: #000;
-    }
-
+    /* Section principale */
     .hero {
-      background: rgba(0, 0, 0, 0.6);
+      position: relative;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Putra_Mosque_and_Putrajaya_Lake.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 100px 20px;
-      border-radius: 20px;
-      margin: 60px auto;
-      max-width: 900px;
+      color: white;
     }
 
-    .hero h2 {
-      color: #d4af37;
-      font-size: 2.3em;
-      margin-bottom: 20px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #fff7db;
     }
 
     .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      line-height: 1.8;
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #f5e8b8;
     }
 
-    .btn-gold {
-      background: linear-gradient(45deg, #d4af37, #fff8dc);
-      color: #000;
+    .hero button {
+      background-color: #d4af37;
       border: none;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
+      padding: 12px 28px;
+      font-size: 18px;
+      color: #333;
+      border-radius: 25px;
       cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Sélecteur de langue */
+    .lang-switch {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+
+    .lang-switch a {
+      color: #000;
+      background: #fff6d6;
+      padding: 5px 12px;
+      margin-left: 6px;
+      border-radius: 12px;
       text-decoration: none;
-      transition: transform 0.3s;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #c6a43d;
+      transition: 0.3s;
     }
 
-    .btn-gold:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 40px 20px;
-      margin: 60px auto;
-      border-radius: 20px;
-      max-width: 900px;
-    }
-
-    section h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    section ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      line-height: 2;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      margin-top: 60px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .lang-switch a:hover {
+      background: #d4af37;
+      color: white;
     }
   </style>
 </head>
-
 <body>
-  <div class="top-banner">
-    ✨ Séjours Halal à travers le monde — Sérénité, foi et élégance ✨
-  </div>
 
+  <!-- Bande supérieure -->
+  <div class="top-banner">✨ Voyages à travers le monde — Sérénité, foi et élégance ✨</div>
+
+  <!-- En-tête -->
   <header>
-  <!-- الشريط الذهبي العلوي -->
-  <div class="top-bar">
-    ✨ Séjours Halal à travers le monde — Sérénité, foi et élégance ✨
-  </div>
-
-  <!-- الشريط الرئيسي -->
-  <nav class="navbar">
     <div class="logo-section">
-      <img src="images/logo.png" alt="Logo Mina Travel" class="logo">
-      <span class="brand-name">Mina Travel</span>
+      <img src="logo.png" alt="Mina Travel Logo">
+      <strong>Mina Travel</strong>
+    </div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Nos Services</a>
+      <a href="#">Nos Offres</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section principale -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Votre voyage pour la Omra commence avec nous !</h1>
+      <p>Nous offrons des séjours confortables et spirituels alliant foi, détente et élégance — votre sérénité est notre priorité.</p>
+      <button>Réserver maintenant</button>
     </div>
 
-    <ul class="nav-links">
-      <li><a href="#" class="active">Accueil</a></li>
-      <li><a href="#">Nos Services</a></li>
-      <li><a href="#">Nos Offres</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  
-  <section class="hero">
-    <h2>Commencez votre voyage pour la Omra avec nous !</h2>
-    <p>Nous vous accompagnons pour une expérience spirituelle et paisible :</p>
-    <ul>
-      <li>Encadrement par un guide religieux expérimenté</li>
-      <li>Visa Omra ou touristique</li>
-      <li>Réservations d’hôtels et de vols</li>
-      <li>Transferts confortables depuis et vers l’aéroport</li>
-      <li>Omra par procuration pour les malades ou les défunts</li>
-      <li>Visites religieuses et historiques</li>
-    </ul>
-    <a href="contact-fr.html" class="btn-gold">Réserver maintenant</a>
+    <!-- Changement de langue -->
+    <div class="lang-switch">
+      <a href="index.html">AR</a>
+      <a href="index-fr.html">FR</a>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>Nos Services</h2>
-    <ul>
-      <li>Visa Omra et visa touristique</li>
-      <li>Réservation d’hôtels et de vols</li>
-      <li>Transferts confortables depuis et vers l’aéroport</li>
-      <li>Omra par procuration pour les malades et défunts</li>
-      <li>Visites religieuses et historiques</li>
-    </ul>
-  </section>
-
-  <section id="offers">
-    <h2>Nos Offres</h2>
-    <p>Profitez dès maintenant de nos réductions spéciales pour les programmes de Omra du mois de Ramadan !</p>
-    <a href="contact-fr.html" class="btn-gold">Réserver une offre</a>
-  </section>
-
-  <footer>
-    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Vienne 46, 1070 Anderlecht</p>
-    <p>📞 +212 661 865 316 (Maroc)</p>
-    <p>📞 +32 487 491 576 (Belgique)</p>
-    <p>📧 minatravel2019@gmail.com</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
-  </script>
 </body>
 </html>
