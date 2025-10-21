@@ -1,172 +1,54 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منا ترافل | رحلات حلال</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background-color: #fff;
-      color: #333;
-      direction: rtl;
-    }
+  <title>مِنا ترافل | رحلات حول العالم — راحة، إيمان وأناقة</title>
 
-    /* الشريط العلوي */
-    .top-banner {
-      background: linear-gradient(to left, #e9d89a, #c6a43d);
-      color: #000;
-      text-align: center;
-      padding: 8px 0;
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.5px;
-    }
+  <!-- ملف التنسيق الخارجي -->
+  <link rel="stylesheet" href="style.css">
 
-    /* الرأس */
-    header {
-      background-color: #444;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 40px;
-    }
-
-    header img {
-      height: 55px;
-      margin-left: 10px;
-      border-radius: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    /* القسم الرئيسي */
-    .hero {
-      position: relative;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Putra_Mosque_and_Putrajaya_Lake.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 700px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-      color: #fff7db;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #f5e8b8;
-    }
-
-    .hero button {
-      background-color: #d4af37;
-      border: none;
-      padding: 12px 28px;
-      font-size: 18px;
-      color: #333;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-    /* زر اللغة */
-    .lang-switch {
-      position: absolute;
-      top: 12px;
-      left: 20px;
-    }
-
-    .lang-switch a {
-      color: #000;
-      background: #fff6d6;
-      padding: 5px 12px;
-      margin-right: 6px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 13px;
-      border: 1px solid #c6a43d;
-      transition: 0.3s;
-    }
-
-    .lang-switch a:hover {
-      background: #d4af37;
-      color: white;
-    }
-  </style>
+  <!-- خط أنيق -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- الشريط العلوي -->
-  <div class="top-banner">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
+  <div class="top-bar">
+    ✨ رحلات حول العالم — راحة، إيمان وأناقة ✨
+  </div>
 
   <!-- الرأس -->
   <header>
-    <div class="logo-section">
-      <strong>منا ترافل</strong>
-      <img src="logo.png" alt="شعار منى ترافل">
+    <div class="logo-container">
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار مِنا ترافل">
+      <h1>مِنا ترافل</h1>
     </div>
     <nav>
-      <a href="index.html">الرئيسية</a>
+      <a href="index.html" class="active">الرئيسية</a>
       <a href="services.html">خدماتنا</a>
       <a href="offers.html">عروضنا</a>
       <a href="contact.html">اتصل بنا</a>
     </nav>
   </header>
 
-  <!-- القسم الرئيسي -->
+  <!-- قسم البطل (الصفحة الرئيسية) -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>رحلتك إلى العمرة تبدأ معنا!</h1>
-      <p>نقدّم رحلات مريحة وروحانية تجمع بين الإيمان والراحة والأناقة — راحتك وسكينتك هي أولويتنا.</p>
-      <button>احجز الآن</button>
-    </div>
+    <h2>رحلتك إلى العمرة تبدأ معنا!</h2>
+    <p>نقدّم رحلات مريحة وروحانية تجمع بين الإيمان والراحة والأناقة — راحتك وسكينتك هي أولويتنا.</p>
+    <a href="contact.html" class="btn-gold">احجز الآن</a>
 
-    <!-- اختيار اللغة -->
-    <div class="lang-switch">
+    <!-- زر اختيار اللغة -->
+    <div class="lang-switch" style="position:absolute; top:15px; left:20px;">
       <a href="index.html">AR</a>
       <a href="index-fr.html">FR</a>
     </div>
   </section>
+
+  <!-- التذييل -->
+  <footer>
+    <p>© 2025 مِنا ترافل — جميع الحقوق محفوظة.</p>
+  </footer>
 
 </body>
 </html>
