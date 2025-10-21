@@ -717,4 +717,66 @@ html {
     margin: 0;
     letter-spacing: 0.5px;
 }
+/* ===== شريط علوي ذهبي صغير ===== */
+.top-bar {
+    background: linear-gradient(to right, #f8e7a2, #d3ad32);
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.95rem;
+    color: #000;
+    font-weight: 600;
+}
+
+/* ===== الشريط الرئيسي ===== */
+.navbar {
+    background: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+/* ===== قسم الشعار ===== */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.brand-name {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ===== روابط القائمة ===== */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d3ad32;
+}
+
 
