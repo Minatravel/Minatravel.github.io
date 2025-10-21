@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contactez-nous - Mina Travel</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #e0f2f1;
+      border: 2px solid #00695c;
+      color: #004d40;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
 <body>
 
@@ -20,29 +46,29 @@
 
       <div class="lang-switcher">
         <div class="lang-switch">
-          <a href="index.html" class="lang-btn">AR</a>
-          <a href="index-fr.html" class="lang-btn">FR</a>
+          <a href="contact.html" class="lang-btn">AR</a>
+          <a href="contact-fr.html" class="lang-btn">FR</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- ✉️ Section contact -->
+  <!-- ✉️ Section Contact -->
   <section class="contact-section">
     <h2>Contactez-nous</h2>
-    <p>Nous serons ravis de répondre à toutes vos questions concernant nos services de Hajj, Omra et voyages religieux.</p>
+    <p>Nous sommes ravis de répondre à toutes vos questions concernant nos services de Hajj, Omra et visites religieuses.</p>
 
     <div class="contact-info">
       <div class="contact-card">
-        <h3>📍 Bureau au Maroc</h3>
-        <p>Avenue Hassan II, Temara Centre 12000</p>
-        <p>📞 +212 661 865 316</p>
+        <h3>📍 Notre bureau au Maroc</h3>
+        <p>Avenue Hassan II, Témara Centre 12000</p>
+        <p>📞 <span class="ltr">+212 661 865 316</span></p>
       </div>
 
       <div class="contact-card">
-        <h3>📍 Bureau en Belgique</h3>
+        <h3>📍 Notre bureau en Belgique</h3>
         <p>Rue de Fiennes 46, 1070 Anderlecht</p>
-        <p>📞 +32 487 491 576</p>
+        <p>📞 <span class="ltr">+32 487 491 576</span></p>
       </div>
 
       <div class="contact-card">
@@ -51,8 +77,7 @@
       </div>
     </div>
 
-    <!-- ✅ Formulaire de contact fonctionnel -->
-    <form action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
+    <form id="contactFormFR" action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
       <label for="name">Nom complet</label>
       <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
 
@@ -63,17 +88,38 @@
       <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
 
       <button type="submit" class="btn-gold">Envoyer le message</button>
+
+      <div class="success-message" id="successMessageFR">✅ Message envoyé avec succès ! Nous vous répondrons très bientôt.</div>
     </form>
   </section>
 
   <!-- 🌙 Pied de page -->
   <footer>
-    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Temara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📞 +212 661 865 316 (Maroc)</p>
-    <p>📞 +32 487 491 576 (Belgique)</p>
+    <p><strong>Notre bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
+    <p><strong>Notre bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
+    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
+
+  <script>
+    const formFR = document.getElementById("contactFormFR");
+    const successMessageFR = document.getElementById("successMessageFR");
+
+    formFR.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(formFR);
+      const response = await fetch(formFR.action, {
+        method: formFR.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        successMessageFR.style.display = "block";
+        formFR.reset();
+      }
+    });
+  </script>
 
 </body>
 </html>
