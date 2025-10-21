@@ -622,6 +622,10 @@ nav a.active {
   background: #ffd54f;
   color: #fff;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
