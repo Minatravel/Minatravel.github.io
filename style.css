@@ -441,11 +441,13 @@ footer {
   color: white;
 }
 /* ===== تأثير الانتقال السلس بين الصفحات (محسّن للموبايل) ===== */
+
+/* ===== إصلاح ظهور الصفحة ===== */
 body {
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.6s ease-in-out;
-  transform: translateY
 }
+
 
 
 
