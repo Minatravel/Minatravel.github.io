@@ -416,6 +416,31 @@ footer {
   color: #fff;
   transform: scale(1.1);
 }
+/* 🌐 أزرار تبديل اللغة */
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.lang-btn {
+  background-color: #ffffff;
+  color: #006644;
+  border: 1px solid #006644;
+  padding: 4px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #006644;
+  color: white;
+}
+
 
 
 
