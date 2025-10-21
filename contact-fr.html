@@ -1,174 +1,160 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Mina Travel</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      font-family: "Poppins", sans-serif;
-      background-color: #fffaf0;
-      color: #333;
       margin: 0;
-      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #fffaf2;
+      color: #222;
+    }
+
+    /* 🔹 Barre du haut */
+    .top-bar {
+      background-color: #000;
+      color: white;
+      text-align: right;
+      padding: 0.5rem 1.5rem;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .top-bar a {
+      color: #d4af37;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      color: white;
     }
 
     header {
-      background-color: #fff;
-      border-bottom: 3px solid #d4af37;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-
-    nav a.active, nav a:hover {
-      color: #d4af37;
-    }
-
-    .lang-switch a {
-      text-decoration: none;
-      margin-left: 10px;
-      color: #333;
-      font-weight: bold;
-    }
-
-    .contact-section {
+      background: linear-gradient(to right, #d4af37, #fff8e7);
+      color: #000;
       text-align: center;
-      padding: 60px 20px;
-    }
-
-    .contact-section h2 {
-      color: #d4af37;
-      font-size: 2em;
-    }
-
-    .contact-section p {
-      color: #555;
-    }
-
-    .contact-form {
-      max-width: 500px;
-      margin: 30px auto;
-      text-align: left;
-    }
-
-    .contact-form label {
-      display: block;
-      margin: 10px 0 5px;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
       font-weight: bold;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-
-    .contact-form button {
-      background-color: #d4af37;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.3s ease;
-    }
-
-    .contact-form button:hover {
-      background-color: #b8962e;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .contact-container {
-      margin-top: 30px;
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      color: #b68c00;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background-color: #b68c00;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d4af37;
+    }
+
+    .whatsapp-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
     }
 
     .whatsapp-buttons a {
       display: inline-block;
       background-color: #25d366;
       color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
       text-decoration: none;
-      margin: 10px;
-      transition: background 0.3s;
+      padding: 0.7rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
     }
 
     .whatsapp-buttons a:hover {
-      background-color: #1da851;
+      background-color: #1ebe5a;
     }
 
     footer {
-      background-color: #fff;
-      border-top: 2px solid #d4af37;
+      background: #000;
+      color: #fff;
       text-align: center;
-      padding: 20px;
-      color: #555;
-      font-size: 0.9em;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Logo Mina Travel">
-    <nav>
-      <a href="index-fr.html">Accueil</a>
-      <a href="offers-fr.html">Nos Offres</a>
-      <a href="contact-fr.html" class="active">Contact</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="contact.html">AR</a>
-      <a href="contact-fr.html">FR</a>
-    </div>
-  </header>
+  <!-- 🔹 Barre du haut -->
+  <div class="top-bar">
+    <a href="contact.html">AR</a> | <a href="contact-fr.html">FR</a>
+  </div>
 
-  <section class="contact-section">
-    <h2>Contactez-nous</h2>
-    <p>Nous serons ravis de répondre à vos questions concernant nos offres Omra, nos séjours halal et nos services de voyage.</p>
+  <header>📞 Contactez-nous</header>
 
-    <form action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
-      <label for="name">Nom complet</label>
-      <input type="text" id="name" name="name" required>
+  <div class="contact-container">
+    <h2>Nous sommes à votre écoute</h2>
+    <p>Remplissez le formulaire ci-dessous ou contactez-nous directement via WhatsApp.</p>
 
-      <label for="email">Adresse e-mail</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer le message</button>
+    <form action="https://formspree.io/f/mzzjqjog" method="POST">
+      <input type="text" name="name" placeholder="Nom complet" required>
+      <input type="email" name="_replyto" placeholder="Adresse e-mail" required>
+      <textarea name="message" placeholder="Écrivez votre message ici..." required></textarea>
+      <button type="submit">Envoyer</button>
     </form>
 
-    <div class="contact-container">
-      <div class="whatsapp-buttons" style="text-align:center;">
-        <a href="https://wa.me/32487491576" target="_blank">💬 WhatsApp (Belgique)</a>
-        <a href="https://wa.me/212661865316" target="_blank">💬 WhatsApp (Maroc)</a>
-      </div>
+    <div class="whatsapp-buttons">
+      <a href="https://wa.me/32487491576" target="_blank">💬 WhatsApp (Belgique)</a>
+      <a href="https://wa.me/212661865316" target="_blank">💬 WhatsApp (Maroc)</a>
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📧 minatravel2019@gmail.com</p>
+    © 2025 Mina Travel – Tous droits réservés.
   </footer>
 
 </body>
