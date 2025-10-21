@@ -1,210 +1,140 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مِنى ترافل - عروضنا الخاصة</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عروضنا - Mina Travel</title>
   <style>
     body {
-      font-family: "Tajawal", "Cairo", sans-serif;
       margin: 0;
-      background: #fffdfa;
-      color: #333;
-      transition: 0.3s ease-in-out;
+      font-family: "Tajawal", sans-serif;
+      background-color: #fffaf2;
+      color: #222;
     }
 
     header {
-      background: linear-gradient(to left, #fff, #f6e6b4);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 5%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      height: 55px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #444;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover, nav a.active {
-      color: #b98e2f;
-    }
-
-    .lang-switch {
-      display: flex;
-      gap: 5px;
-    }
-
-    .lang-btn {
-      background: #b98e2f;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    .lang-btn:hover {
-      background: #e2c46b;
-      color: #222;
-    }
-
-    .offers {
+      background: linear-gradient(to right, #d4af37, #fff8e7);
+      color: #000;
       text-align: center;
-      padding: 60px 10%;
+      padding: 1.5rem 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .offers h1 {
-      color: #b98e2f;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    .offers p {
-      color: #555;
-      font-size: 1.1em;
-      margin-bottom: 40px;
-    }
-
-    .offer-cards {
+    .offers-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .card {
-      background: white;
+    .offer-card {
+      background: #fff;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 25px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
+    .offer-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
-    .card h3 {
-      color: #b98e2f;
-      margin-bottom: 10px;
+    .offer-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
-    .card p {
+    .offer-content {
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .offer-content h3 {
+      color: #b68c00;
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .offer-content p {
       color: #555;
-      font-size: 0.95em;
-      line-height: 1.7;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .btn-gold {
-      display: inline-block;
-      background: #b98e2f;
+    .offer-content a {
+      background-color: #b68c00;
       color: white;
-      padding: 10px 25px;
-      border-radius: 25px;
       text-decoration: none;
-      font-weight: bold;
-      margin-top: 15px;
-      transition: 0.3s;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
     }
 
-    .btn-gold:hover {
-      background: #e2c46b;
-      color: #222;
+    .offer-content a:hover {
+      background-color: #d4af37;
     }
 
     footer {
-      background: #111;
-      color: #ddd;
+      background: #000;
+      color: #fff;
       text-align: center;
-      padding: 25px 10%;
-      margin-top: 60px;
-    }
-
-    footer p {
-      margin: 8px 0;
-      font-size: 14px;
-    }
-
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo-container">
-      <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار مِنى ترافل" class="logo">
-      <h1>مِنى ترافل</h1>
+  <header>🌍 عروض Mina Travel – رحلات حول العالم</header>
+
+  <section class="offers-container">
+    <div class="offer-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Masjid_al-Haram_Makkah.jpg/1200px-Masjid_al-Haram_Makkah.jpg" alt="مكة المكرمة">
+      <div class="offer-content">
+        <h3>عمرة رمضان المبارك</h3>
+        <p>رحلة روحانية مميزة تشمل الإقامة قرب الحرم المكي مع خدمات مريحة.</p>
+        <a href="contact.html">احجز الآن</a>
+      </div>
     </div>
 
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="#offers" class="active">عروضنا</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-
-    <div class="lang-switch">
-      <a href="offers-ar.html" class="lang-btn">AR</a>
-      <a href="offers.html" class="lang-btn">FR</a>
+    <div class="offer-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bosphorus_Bridge_Istanbul.jpg/1200px-Bosphorus_Bridge_Istanbul.jpg" alt="تركيا">
+      <div class="offer-content">
+        <h3>رحلة إسطنبول الحلال</h3>
+        <p>اكتشف سحر تركيا مع إقامة في فنادق إسلامية وخدمة فاخرة.</p>
+        <a href="contact.html">احجز الآن</a>
+      </div>
     </div>
-  </header>
 
-  <section class="offers">
-    <h1>عروضنا المميزة</h1>
-    <p>اكتشف باقاتنا الخاصة للعمرة، والحج، والرحلات الإسلامية في أجواء من الراحة والإيمان ✨</p>
-
-    <div class="offer-cards">
-      <div class="card">
-        <h3>عمرة كلاسيكية</h3>
-        <p>رحلة مريحة تشمل تذاكر الطيران، وإقامة في فنادق ٤ نجوم بمكة والمدينة، ونقل خاص، ومرافق ديني.</p>
-        <a href="contact.html" class="btn-gold">احجز الآن</a>
+    <div class="offer-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Masjid_Putra_Putrajaya_Malaysia.jpg/1200px-Masjid_Putra_Putrajaya_Malaysia.jpg" alt="ماليزيا">
+      <div class="offer-content">
+        <h3>إقامة فاخرة في كوالالمبور</h3>
+        <p>استمتع بإجازة راقية في فنادق حلال مع مناظر خلابة وخدمات متميزة.</p>
+        <a href="contact.html">احجز الآن</a>
       </div>
+    </div>
 
-      <div class="card">
-        <h3>عمرة رمضان</h3>
-        <p>عِش روحانية الشهر الفضيل مع برنامج متكامل وخدمات راقية طيلة الرحلة.</p>
-        <a href="contact.html" class="btn-gold">احجز الآن</a>
-      </div>
-
-      <div class="card">
-        <h3>رحلات إسلامية</h3>
-        <p>استمتع بزيارة بلدان مثل تركيا 🇹🇷 وماليزيا 🇲🇾 وإندونيسيا 🇮🇩 ضمن برامج سياحية حلال ومميزة.</p>
-        <a href="contact.html" class="btn-gold">احجز الآن</a>
+    <div class="offer-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dubai_Marina_skyline_2017.jpg/1200px-Dubai_Marina_skyline_2017.jpg" alt="دبي">
+      <div class="offer-content">
+        <h3>عطلة عائلية في دبي</h3>
+        <p>تجربة تسوق وترفيه راقية مع سكن حلال في قلب دبي.</p>
+        <a href="contact.html">احجز الآن</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p><strong>المكتب في المغرب:</strong> شارع الحسن الثاني، تمارة سنتر 12000</p>
-    <p><strong>المكتب في بلجيكا:</strong> شارع دو فيين 46، 1070 أندرلخت</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
-    <p>📧 minatravel2019@gmail.com</p>
+    © 2025 Mina Travel – جميع الحقوق محفوظة.
   </footer>
 
 </body>
