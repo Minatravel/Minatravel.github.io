@@ -3,79 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منى ترافل - الحج والعمرة</title>
+  <title>منا ترافل - العمرة والحج</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: "Cairo", sans-serif; margin: 0; background-color: #f4f4f4; opacity: 0; transition: opacity 0.5s; }
-    header { background-color: #006b5b; padding: 10px 40px; color: white; position: relative; }
-    .header-container { display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; }
-    .logo-container { display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; }
-    .logo { height: 50px; }
-    nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
-    nav a.active { color: #FFD700; }
-    .lang-switch {
-      position: absolute;
-      left: 20px;
-      top: 15px;
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
+      color: #fff;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
     }
-    .lang-switch a {
-      background-color: white;
-      color: black;
-      padding: 5px 10px;
+
+    .top-banner {
+      background: linear-gradient(to left, #d4af37, #fff8dc);
+      color: #222;
+      text-align: center;
+      font-weight: 600;
+      padding: 8px 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      animation: fadeIn 2s ease;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #d4af37;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      position: absolute;
+      right: 20px;
+    }
+
+    .lang-btn {
+      border: 1px solid #d4af37;
+      color: white;
+      padding: 4px 10px;
       border-radius: 5px;
       text-decoration: none;
-      margin-left: 5px;
-      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s;
     }
-    section { padding: 40px; text-align: center; }
-    .btn-gold { background-color: #FFD700; color: black; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-    footer { background-color: #333; color: white; text-align: center; padding: 20px; line-height: 1.8; }
-    .ltr { direction: ltr; unicode-bidi: bidi-override; display: inline-block; }
+
+    .lang-btn:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+    }
+
+    .hero p, .hero ul {
+      font-size: 1.1em;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .btn-gold {
+      background: linear-gradient(45deg, #d4af37, #fff8dc);
+      color: #000;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .btn-gold:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 40px auto;
+      padding: 40px 20px;
+      border-radius: 20px;
+      max-width: 900px;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+    }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
+
 <body>
+  <!-- ✨ شريط علوي -->
+  <div class="top-banner">
+    ✨ رحلات حلال حول العالم — راحة، روحانية، وأناقة ✨
+  </div>
+
+  <!-- 🌍 رأس الصفحة -->
   <header>
-    <div class="header-container">
-      <div class="lang-switch">
-        <a href="index.html">AR</a>
-        <a href="index-fr.html">FR</a>
-      </div>
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-        <h1>منى ترافل</h1>
-      </div>
-      <nav>
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="#services">خدماتنا</a>
-        <a href="#offers">عروضنا</a>
-        <a href="contact.html">اتصل بنا</a>
-      </nav>
+    <div class="logo-container">
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار منا ترافل" class="logo">
+      <h1>منا ترافل</h1>
+    </div>
+
+    <nav>
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#offers">عروضنا</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="index.html" class="lang-btn">AR</a>
+      <a href="index-fr.html" class="lang-btn">FR</a>
     </div>
   </header>
+
+  <!-- ✨ قسم المقدمة -->
   <section class="hero">
-    <h2>رحلتك للعمرة تبدأ معنا!</h2>
-    <p>نحن نقدم لك كل ما تحتاجه:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li>تأطير من مرشد ديني ذو خبرة</li>
-      <li>تأشيرة عمرة أو تأشيرة سياحية</li>
-      <li>حجوزات الفنادق والرحلات الجوية</li>
-      <li>نقل مريح من وإلى المطار</li>
-      <li>عمرة بالنيابة عن المرضى أو المتوفين</li>
-      <li>زيارات دينية وتاريخية</li>
-      <li>مساعدة رجال الأعمال</li>
+    <h2>رحلتك الروحية تبدأ من هنا 🌙</h2>
+    <p>مع <strong>منا ترافل</strong> عِش تجربة العمرة والرحلات الحلال حول العالم بروحانية وراحة تامة.</p>
+    <ul>
+      <li>تأطير ديني باحترافية</li>
+      <li>تأشيرة عمرة أو سياحية</li>
+      <li>حجوزات فنادق ورحلات جوية</li>
+      <li>تنقلات مريحة من وإلى المطار</li>
+      <li>عمرة بالنيابة للمرضى والمتوفين</li>
+      <li>زيارات دينية وثقافية</li>
     </ul>
-    <p>معنا... راحتك وعبادتك أولويتنا 🌙</p>
     <a href="contact.html" class="btn-gold">احجز الآن</a>
   </section>
+
+  <!-- 🕋 خدماتنا -->
+  <section id="services">
+    <h2>خدماتنا</h2>
+    <ul>
+      <li>تأشيرات العمرة والسياحة</li>
+      <li>حجوزات الفنادق والطيران</li>
+      <li>تنقلات مريحة من وإلى المطار</li>
+      <li>عمرة بالنيابة</li>
+      <li>زيارات دينية وثقافية</li>
+    </ul>
+  </section>
+
+  <!-- 💎 عروضنا -->
+  <section id="offers">
+    <h2>عروضنا</h2>
+    <p>اكتشفوا برامجنا الخاصة للعمرة ورمضان والرحلات الحلال حول العالم 🌍</p>
+    <a href="contact.html" class="btn-gold">احجز عرضك الآن</a>
+  </section>
+
+  <!-- 🌙 تذييل الصفحة -->
   <footer>
     <p><strong>مكتب المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
-    <p><strong>مكتب بلجيكا:</strong> شارع دو فيين 46، 1070 أندرلخت</p>
+    <p><strong>مكتب بلجيكا:</strong> شارع دو فيين 46، 1070 أندرليخت</p>
     <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
     <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
+
   <script>
-    document.addEventListener("DOMContentLoaded", () => { document.body.style.opacity = "1"; });
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "1";
+    });
   </script>
 </body>
 </html>
