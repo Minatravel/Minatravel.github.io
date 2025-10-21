@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مِنى ترافل - الحج والعمرة</title>
+  <title>منى ترافل - الحج والعمرة</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body { font-family: "Cairo", sans-serif; margin: 0; background-color: #f4f4f4; opacity: 0; transition: opacity 0.5s; }
-    header { background-color: #006b5b; padding: 10px 40px; color: white; }
+    header { background-color: #006b5b; padding: 10px 40px; color: white; position: relative; }
     .header-container { display: flex; align-items: center; justify-content: space-between; flex-direction: row-reverse; }
     .logo-container { display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; }
     .logo { height: 50px; }
     nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; }
     nav a.active { color: #FFD700; }
+    .lang-switch { position: absolute; right: 20px; top: 15px; }
     .lang-switch a { background-color: white; color: black; padding: 5px 10px; border-radius: 5px; text-decoration: none; margin-left: 5px; font-weight: bold; }
     section { padding: 40px; text-align: center; }
     .btn-gold { background-color: #FFD700; color: black; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
@@ -23,25 +24,25 @@
 <body>
   <header>
     <div class="header-container">
-      <!-- Logo -->
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-        <h1>مِنى ترافل</h1>
+      <!-- أزرار اللغة -->
+      <div class="lang-switch">
+        <a href="index.html">AR</a>
+        <a href="index-fr.html">FR</a>
       </div>
 
-      <!-- Navigation -->
+      <!-- الشعار -->
+      <div class="logo-container">
+        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+        <h1>منى ترافل</h1>
+      </div>
+
+      <!-- الروابط -->
       <nav>
         <a href="index.html" class="active">الرئيسية</a>
         <a href="#services">خدماتنا</a>
         <a href="#offers">عروضنا</a>
         <a href="contact.html">اتصل بنا</a>
       </nav>
-
-      <!-- Langues -->
-      <div class="lang-switch">
-        <a href="index.html">AR</a>
-        <a href="index-fr.html">FR</a>
-      </div>
     </div>
   </header>
 
@@ -59,23 +60,6 @@
     </ul>
     <p>معنا... راحتك وعبادتك أولويتنا 🌙</p>
     <a href="contact.html" class="btn-gold">احجز الآن</a>
-  </section>
-
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>تأشيرات العمرة والسياحة</li>
-      <li>حجوزات الفنادق والطيران</li>
-      <li>نقل مريح من وإلى المطار</li>
-      <li>عمرة بالنيابة عن المرضى والمتوفين</li>
-      <li>زيارات دينية وتاريخية</li>
-    </ul>
-  </section>
-
-  <section id="offers">
-    <h2>عروضنا</h2>
-    <p>اغتنم الآن تخفيضات خاصة على برامج العمرة لشهر رمضان!</p>
-    <a href="contact.html" class="btn-gold">احجز عرضك الآن</a>
   </section>
 
   <footer>
