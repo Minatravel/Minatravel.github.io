@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina Travel - Hajj & Omra</title>
+  <title>Mina Travel - Omra, Hajj & Séjours Halal</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
       background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
       color: #fff;
-      transition: opacity 1s ease-in-out;
       opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .top-banner {
+      background: linear-gradient(to right, #fff8dc, #d4af37);
+      color: #222;
+      text-align: center;
+      font-weight: 600;
+      padding: 8px 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      animation: fadeIn 2s ease;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.65);
       padding: 15px 40px;
       display: flex;
       align-items: center;
@@ -24,17 +36,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
-    .top-banner {
-      background: linear-gradient(to right, #d4af37, #fff8dc);
-      color: #222;
-      text-align: center;
-      font-weight: 500;
-      padding: 8px 0;
-      font-size: 15px;
-      letter-spacing: 1px;
-      animation: fadeIn 2s ease;
     }
 
     .logo-container {
@@ -65,7 +66,7 @@
       display: flex;
       gap: 8px;
       position: absolute;
-      left: 20px;
+      right: 20px;
     }
 
     .lang-btn {
@@ -84,33 +85,36 @@
     }
 
     .hero {
-      text-align: center;
-      padding: 120px 20px 80px;
       background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 20px;
+      margin: 60px auto;
+      max-width: 900px;
     }
 
     .hero h2 {
-      font-size: 2.5em;
-      color: #fff;
-      text-shadow: 1px 1px 10px #000;
+      color: #d4af37;
+      font-size: 2.3em;
+      margin-bottom: 20px;
     }
 
-    .hero p, .hero ul {
-      font-size: 1.1em;
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
       line-height: 1.8;
-      max-width: 700px;
-      margin: 0 auto;
     }
 
     .btn-gold {
       background: linear-gradient(45deg, #d4af37, #fff8dc);
       color: #000;
-      padding: 10px 25px;
-      border-radius: 25px;
-      text-decoration: none;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 16px;
       font-weight: bold;
-      margin-top: 20px;
-      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
       transition: transform 0.3s;
     }
 
@@ -120,10 +124,23 @@
 
     section {
       background: rgba(0, 0, 0, 0.7);
-      margin: 40px auto;
       padding: 40px 20px;
+      margin: 60px auto;
       border-radius: 20px;
       max-width: 900px;
+    }
+
+    section h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      line-height: 2;
     }
 
     footer {
@@ -131,13 +148,7 @@
       text-align: center;
       padding: 30px;
       font-size: 0.9em;
-    }
-
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
+      margin-top: 60px;
     }
 
     @keyframes fadeIn {
@@ -148,12 +159,10 @@
 </head>
 
 <body>
-  <!-- 💫 شريط علوي -->
   <div class="top-banner">
-    ✨ Séjours Halal à travers le monde — Confort, spiritualité et élégance ✨
+    ✨ Séjours Halal à travers le monde — Sérénité, foi et élégance ✨
   </div>
 
-  <!-- 🌍 رأس الصفحة -->
   <header>
     <div class="logo-container">
       <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
@@ -173,46 +182,42 @@
     </div>
   </header>
 
-  <!-- ✨ قسم المقدمة -->
   <section class="hero">
-    <h2>Votre voyage spirituel commence ici 🌙</h2>
-    <p>Avec <strong>Mina Travel</strong>, vivez la Omra et les séjours Halal dans le monde entier, dans le confort et la sérénité.</p>
+    <h2>Commencez votre voyage pour la Omra avec nous !</h2>
+    <p>Nous vous accompagnons pour une expérience spirituelle et paisible :</p>
     <ul>
-      <li>Encadrement religieux professionnel</li>
+      <li>Encadrement par un guide religieux expérimenté</li>
       <li>Visa Omra ou touristique</li>
-      <li>Réservations d’hôtels et vols</li>
-      <li>Transferts confortables</li>
-      <li>Omra par procuration</li>
-      <li>Visites religieuses et culturelles</li>
+      <li>Réservations d’hôtels et de vols</li>
+      <li>Transferts confortables depuis et vers l’aéroport</li>
+      <li>Omra par procuration pour les malades ou les défunts</li>
+      <li>Visites religieuses et historiques</li>
     </ul>
     <a href="contact-fr.html" class="btn-gold">Réserver maintenant</a>
   </section>
 
-  <!-- 🕋 Nos Services -->
   <section id="services">
     <h2>Nos Services</h2>
     <ul>
       <li>Visa Omra et visa touristique</li>
-      <li>Réservations d’hôtels et vols</li>
-      <li>Transferts depuis et vers l’aéroport</li>
-      <li>Omra par procuration</li>
-      <li>Visites religieuses et culturelles</li>
+      <li>Réservation d’hôtels et de vols</li>
+      <li>Transferts confortables depuis et vers l’aéroport</li>
+      <li>Omra par procuration pour les malades et défunts</li>
+      <li>Visites religieuses et historiques</li>
     </ul>
   </section>
 
-  <!-- 💎 Nos Offres -->
   <section id="offers">
     <h2>Nos Offres</h2>
-    <p>Découvrez nos programmes spéciaux pour la Omra, le Ramadan et les séjours Halal à travers le monde 🌍</p>
+    <p>Profitez dès maintenant de nos réductions spéciales pour les programmes de Omra du mois de Ramadan !</p>
     <a href="contact-fr.html" class="btn-gold">Réserver une offre</a>
   </section>
 
-  <!-- 🌙 Pied de page -->
   <footer>
     <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
+    <p><strong>Bureau en Belgique :</strong> Rue de Vienne 46, 1070 Anderlecht</p>
+    <p>📞 +212 661 865 316 (Maroc)</p>
+    <p>📞 +32 487 491 576 (Belgique)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
