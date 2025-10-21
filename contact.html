@@ -119,6 +119,24 @@
       }
     });
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      if (link.getAttribute("href") && !link.getAttribute("href").startsWith("#")) {
+        e.preventDefault();
+        document.body.classList.remove("fade-in");
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 300);
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
+
