@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mina Travel - Nos Offres</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background: #fffdfa;
+      color: #333;
+      transition: 0.3s ease-in-out;
+    }
+
+    header {
+      background: linear-gradient(to right, #fff, #f6e6b4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 5%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 55px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #b98e2f;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 5px;
+    }
+
+    .lang-btn {
+      background: #b98e2f;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: #e2c46b;
+      color: #222;
+    }
+
+    .offers {
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .offers h1 {
+      color: #b98e2f;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .offers p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+
+    .offer-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #b98e2f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .btn-gold {
+      display: inline-block;
+      background: #b98e2f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .btn-gold:hover {
+      background: #e2c46b;
+      color: #222;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 25px 10%;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+      <h1>Mina Travel</h1>
+    </div>
+
+    <nav>
+      <a href="index-fr.html">Accueil</a>
+      <a href="#offers" class="active">Nos Offres</a>
+      <a href="contact-fr.html">Contact</a>
+    </nav>
+
+    <div class="lang-switch">
+      <a href="offers-ar.html" class="lang-btn">AR</a>
+      <a href="offers.html" class="lang-btn">FR</a>
+    </div>
+  </header>
+
+  <section class="offers">
+    <h1>Nos Offres Spéciales</h1>
+    <p>Découvrez nos formules exclusives pour la Omra, le Hajj et les voyages spirituels en toute sérénité 🌙</p>
+
+    <div class="offer-cards">
+      <div class="card">
+        <h3>Omra Classique</h3>
+        <p>Vols + Hôtel 4★ à La Mecque et Médine + Transferts + Guide religieux.</p>
+        <a href="contact-fr.html" class="btn-gold">Réserver</a>
+      </div>
+
+      <div class="card">
+        <h3>Omra Ramadan</h3>
+        <p>Profitez d'une expérience unique pendant le mois sacré avec un accompagnement complet.</p>
+        <a href="contact-fr.html" class="btn-gold">Réserver</a>
+      </div>
+
+      <div class="card">
+        <h3>Voyages Islamiques</h3>
+        <p>Destinations telles que la Turquie 🇹🇷, la Malaisie 🇲🇾 et l’Indonésie 🇮🇩 dans un cadre halal et spirituel.</p>
+        <a href="contact-fr.html" class="btn-gold">Réserver</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
+    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
+    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
+    <p>📧 minatravel2019@gmail.com</p>
+  </footer>
+
+</body>
+</html>
