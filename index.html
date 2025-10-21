@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مِنى ترافل | Mina Travel</title>
+  <title>منا ترافل | رحلات حلال</title>
   <style>
     body {
       margin: 0;
       font-family: "Cairo", sans-serif;
       background-color: #fff;
       color: #333;
+      direction: rtl;
     }
 
     /* الشريط العلوي */
     .top-banner {
-      background: linear-gradient(to right, #e9d89a, #c6a43d);
+      background: linear-gradient(to left, #e9d89a, #c6a43d);
       color: #000;
       text-align: center;
       padding: 8px 0;
@@ -51,6 +52,7 @@
       color: #d4af37;
     }
 
+    /* القسم الرئيسي */
     .hero {
       position: relative;
       background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Putra_Mosque_and_Putrajaya_Lake.jpg');
@@ -105,6 +107,7 @@
       color: #000;
     }
 
+    /* زر اللغة */
     .lang-switch {
       position: absolute;
       top: 12px;
@@ -115,7 +118,7 @@
       color: #000;
       background: #fff6d6;
       padding: 5px 12px;
-      margin-left: 6px;
+      margin-right: 6px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
@@ -128,38 +131,39 @@
       background: #d4af37;
       color: white;
     }
-
   </style>
 </head>
 <body>
 
-  <!-- الشريط التعريفي -->
+  <!-- الشريط العلوي -->
   <div class="top-banner">✨ رحلات حول العالم — راحة، إيمان وأناقة ✨</div>
 
   <!-- الرأس -->
   <header>
     <div class="logo-section">
-      <img src="logo.png" alt="Mina Travel Logo">
-      <strong>Mina Travel | مِنى ترافل</strong>
+      <strong>منا ترافل</strong>
+      <img src="logo.png" alt="شعار منى ترافل">
     </div>
     <nav>
-      <a href="#">الرئيسية</a>
-      <a href="#">خدماتنا</a>
-      <a href="#">عروضنا</a>
-      <a href="#">اتصل بنا</a>
+      <a href="index.html">الرئيسية</a>
+      <a href="services.html">خدماتنا</a>
+      <a href="offers.html">عروضنا</a>
+      <a href="contact.html">اتصل بنا</a>
     </nav>
   </header>
 
-  <!-- قسم الترحيب -->
+  <!-- القسم الرئيسي -->
   <section class="hero">
     <div class="hero-content">
-      <h1>رحلتك للعُمرة تبدأ معنا!</h1>
-      <p>نوفر لك رحلات مريحة وآمنة تجمع بين الراحة والإيمان والأناقة — لأن راحتك عبادتنا.</p>
+      <h1>رحلتك إلى العمرة تبدأ معنا!</h1>
+      <p>نقدّم رحلات مريحة وروحانية تجمع بين الإيمان والراحة والأناقة — راحتك وسكينتك هي أولويتنا.</p>
       <button>احجز الآن</button>
     </div>
+
+    <!-- اختيار اللغة -->
     <div class="lang-switch">
-      <a href="#">FR</a>
-      <a href="#">AR</a>
+      <a href="index.html">AR</a>
+      <a href="index-fr.html">FR</a>
     </div>
   </section>
 
