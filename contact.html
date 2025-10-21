@@ -3,51 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا - مِنى ترافل</title>
+  <title>اتصل بنا - منا ترافل</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: #fff;
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+    }
+
+    .top-banner {
+      background: linear-gradient(to left, #d4af37, #fff8dc);
+      color: #222;
+      text-align: center;
+      font-weight: 600;
+      padding: 8px 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+      animation: fadeIn 2s ease;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #d4af37;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      position: absolute;
+      right: 20px;
+    }
+
+    .lang-btn {
+      border: 1px solid #d4af37;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .contact-section {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
+      margin: 60px auto;
+      border-radius: 20px;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: #d4af37;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: linear-gradient(45deg, #d4af37, #fff8dc);
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      margin-top: 60px;
+    }
+
+    .ltr {
+      direction: ltr;
+      unicode-bidi: bidi-override;
+      text-align: left;
+      display: inline-block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ✅ رأس الصفحة -->
+  <!-- ✨ شريط علوي -->
+  <div class="top-banner">
+    ✨ رحلات حلال حول العالم — راحة، روحانية، وأناقة ✨
+  </div>
+
+  <!-- 🌍 رأس الصفحة -->
   <header>
-    <div class="navbar">
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار مِنى ترافل" class="logo">
-        <h1>Mina Travel</h1>
-      </div>
+    <div class="logo-container">
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار منا ترافل" class="logo">
+      <h1>منا ترافل</h1>
+    </div>
 
-      <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="index.html#services">خدماتنا</a>
-        <a href="index.html#offers">عروضنا</a>
-        <a href="contact.html" class="active">اتصل بنا</a>
-      </nav>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#services">خدماتنا</a>
+      <a href="index.html#offers">عروضنا</a>
+      <a href="contact.html" class="active">اتصل بنا</a>
+    </nav>
 
-      <div class="lang-switch">
-        <a href="contact.html" class="lang-btn">AR</a>
-        <a href="contact-fr.html" class="lang-btn">FR</a>
-      </div>
+    <div class="lang-switch">
+      <a href="contact.html" class="lang-btn">AR</a>
+      <a href="contact-fr.html" class="lang-btn">FR</a>
     </div>
   </header>
 
-  <!-- 📞 نموذج الاتصال -->
-  <section class="contact-form">
-    <h2>تواصل معنا</h2>
-    <p>املأ النموذج أدناه وسنقوم بالتواصل معك في أقرب وقت ممكن.</p>
+  <!-- ✉️ قسم الاتصال -->
+  <section class="contact-section">
+    <h2>📩 تواصل معنا</h2>
+    <p>يسعدنا تواصلك معنا لأي استفسار أو حجز.</p>
 
-    <form action="#" method="post">
-      <input type="text" name="nom" placeholder="الاسم الكامل" required>
+    <form class="contact-form" action="https://formspree.io/f/mzzjqjog" method="POST">
+      <input type="text" name="name" placeholder="الاسم الكامل" required>
       <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-      <input type="tel" name="telephone" placeholder="رقم الهاتف">
-      <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-      <button type="submit">إرسال</button>
+      <input type="text" name="subject" placeholder="الموضوع">
+      <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
+      <button type="submit">إرسال الرسالة</button>
     </form>
   </section>
 
-  <!-- 🌙 الفوتر -->
+  <!-- 🌙 التذييل -->
   <footer>
-    <p><strong>المكتب في المغرب:</strong> شارع الحسن الثاني، تمارة سنتر 12000</p>
-    <p><strong>المكتب في بلجيكا:</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+    <p><strong>مكتب المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
+    <p><strong>مكتب بلجيكا:</strong> شارع دو فيين 46، 1070 أندرليخت</p>
     <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
     <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
@@ -60,31 +204,3 @@
   </script>
 </body>
 </html>
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>اتصل بنا</h2>
-    <form action="https://formspree.io/f/mzzjqjog" method="POST">
-      <div class="form-group">
-        <label for="name">الاسم الكامل</label>
-        <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">رسالتك</label>
-        <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-      </div>
-
-      <!-- اختياري: يمكنك تحديد صفحة نجاح -->
-      <input type="hidden" name="_next" value="https://minatravel.github.io/thankyou.html">
-      <input type="hidden" name="_captcha" value="false">
-
-      <button type="submit" class="btn">إرسال</button>
-    </form>
-  </div>
-</section>
-
