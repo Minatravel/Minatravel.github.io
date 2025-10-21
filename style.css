@@ -734,6 +734,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 12px 40px;
+  flex-wrap: wrap;
 }
 
 /* --- الشعار والاسم --- */
@@ -743,7 +744,7 @@ html {
   gap: 10px;
 }
 
-.logo-section img.logo {
+.logo {
   width: 55px;
   height: 55px;
   object-fit: contain;
@@ -777,6 +778,24 @@ html {
   color: #d3ad32;
 }
 
+/* --- زر تغيير اللغة --- */
+.lang-switch {
+  display: flex;
+  gap: 8px;
+}
 
+.lang-btn {
+  background: #d3ad32;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-
+.lang-btn:hover {
+  background: #f8e7a2;
+  color: #333;
+}
