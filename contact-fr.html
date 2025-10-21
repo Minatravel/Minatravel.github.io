@@ -6,106 +6,186 @@
   <title>Contact - Mina Travel</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; opacity: 0; transition: opacity 0.5s; }
-    header {
-      background-color: #006b5b;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    .logo-container { display: flex; align-items: center; gap: 10px; }
-    .logo { width: 50px; height: 50px; border-radius: 6px; object-fit: cover; }
+    .top-banner {
+      background: linear-gradient(to right, #fff8dc, #d4af37);
+      color: #222;
+      text-align: center;
+      font-weight: 600;
+      padding: 8px 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
 
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover, nav a.active { color: #ffcc00; }
+    header {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    .lang-switch { display: flex; gap: 8px; }
-    .lang-btn { background: white; color: black; padding: 4px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      color: #d4af37;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      position: absolute;
+      right: 20px;
+    }
+
+    .lang-btn {
+      border: 1px solid #d4af37;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .contact-section {
+      background: rgba(0, 0, 0, 0.75);
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
 
     .contact-form {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    input, textarea {
+    .contact-form input, .contact-form textarea {
       width: 100%;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
     }
 
-    button {
-      background-color: #006b5b;
-      color: white;
-      padding: 10px 20px;
+    .contact-form button {
+      background: linear-gradient(45deg, #d4af37, #fff8dc);
+      color: #000;
       border: none;
-      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 30px;
       cursor: pointer;
       font-weight: bold;
+      transition: transform 0.3s;
     }
 
-    button:hover { background-color: #004d40; }
+    .contact-form button:hover {
+      transform: scale(1.05);
+    }
 
     footer {
-      background-color: #004d40;
-      color: white;
+      background: #111;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+      font-size: 0.9em;
+      margin-top: 60px;
     }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="logo-container">
-    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-    <h1>Mina Travel</h1>
+  <div class="top-banner">
+    ✨ Séjours Halal à travers le monde — Sérénité, foi et élégance ✨
   </div>
 
-  <nav>
-    <a href="index-fr.html">Accueil</a>
-    <a href="services.html">Nos Services</a>
-    <a href="offers.html">Nos Offres</a>
-    <a href="contact-fr.html" class="active">Contact</a>
-  </nav>
+  <header>
+    <div class="logo-container">
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+      <h1>Mina Travel</h1>
+    </div>
 
-  <div class="lang-switch">
-    <a href="contact.html" class="lang-btn">AR</a>
-    <a href="contact-fr.html" class="lang-btn">FR</a>
-  </div>
-</header>
+    <nav>
+      <a href="index-fr.html">Accueil</a>
+      <a href="index-fr.html#services">Nos Services</a>
+      <a href="index-fr.html#offers">Nos Offres</a>
+      <a href="contact-fr.html" class="active">Contact</a>
+    </nav>
 
-<section class="contact-form">
-  <h2>Contactez-nous</h2>
-  <form action="https://formspree.io/f/mzzjqjog" method="POST">
-    <input type="text" name="name" placeholder="Votre nom" required>
-    <input type="email" name="_replyto" placeholder="Votre email" required>
-    <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
+    <div class="lang-switch">
+      <a href="contact.html" class="lang-btn">AR</a>
+      <a href="contact-fr.html" class="lang-btn">FR</a>
+    </div>
+  </header>
 
-<footer>
-  <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-  <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-  <p>📞 +212 661 865 316 (Maroc)</p>
-  <p>📞 +32 487 491 576 (Belgique)</p>
-  <p>📧 minatravel2019@gmail.com</p>
-</footer>
+  <section class="contact-section">
+    <h2>Contactez-nous</h2>
+    <p>Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais.</p>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = "1";
-  });
-</script>
+    <form class="contact-form" action="https://formspree.io/f/mzzjqjog" method="POST">
+      <input type="text" name="name" placeholder="Votre nom complet" required>
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </section>
 
+  <footer>
+    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
+    <p><strong>Bureau en Belgique :</strong> Rue de Vienne 46, 1070 Anderlecht</p>
+    <p>📞 +212 661 865 316 (Maroc)</p>
+    <p>📞 +32 487 491 576 (Belgique)</p>
+    <p>📧 minatravel2019@gmail.com</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "1";
+    });
+  </script>
 </body>
 </html>
