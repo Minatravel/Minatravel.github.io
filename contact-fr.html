@@ -5,55 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Mina Travel</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
-    }
-
-    .success-message {
-      display: none;
-      background-color: #e0f2f1;
-      border: 2px solid #00695c;
-      color: #004d40;
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      animation: fadeIn 0.8s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-10px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* Appliquer l'effet de fondu d'apparition */
-    body {
-      opacity: 0;
-      transition: opacity 0.6s ease-in-out;
-    }
-    body.fade-in {
-      opacity: 1;
-    }
-  </style>
 </head>
-<body>
 
-  <!-- 🌍 En-tête -->
+<body>
+  <!-- ✅ En-tête -->
   <header>
     <div class="navbar">
-      <h1>Mina Travel</h1>
+      <div class="logo-container">
+        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Logo Mina Travel" class="logo">
+        <h1>Mina Travel</h1>
+      </div>
 
-      <nav class="nav-links">
+      <nav>
         <a href="index-fr.html">Accueil</a>
+        <a href="index-fr.html#services">Nos Services</a>
+        <a href="index-fr.html#offers">Nos Offres</a>
         <a href="contact-fr.html" class="active">Contact</a>
       </nav>
 
-      <!-- 🌐 Sélecteur de langue -->
       <div class="lang-switch">
         <a href="contact.html" class="lang-btn">AR</a>
         <a href="contact-fr.html" class="lang-btn">FR</a>
@@ -61,46 +30,21 @@
     </div>
   </header>
 
-  <!-- ✉️ Section Contact -->
-  <section class="contact-section">
+  <!-- 📞 Formulaire de contact -->
+  <section class="contact-form">
     <h2>Contactez-nous</h2>
-    <p>Nous serons ravis de répondre à toutes vos questions concernant le Hajj, la Omra et nos voyages religieux.</p>
+    <p>Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les plus brefs délais.</p>
 
-    <div class="contact-info">
-      <div class="contact-card">
-        <h3>📍 Bureau au Maroc</h3>
-        <p>Avenue Hassan II, Témara Centre 12000</p>
-        <p>📞 <span class="ltr">+212 661 865 316</span></p>
-      </div>
-
-      <div class="contact-card">
-        <h3>📍 Bureau en Belgique</h3>
-        <p>Rue de Fiennes 46, 1070 Anderlecht</p>
-        <p>📞 <span class="ltr">+32 487 491 576</span></p>
-      </div>
-
-      <div class="contact-card">
-        <h3>📧 Email</h3>
-        <p>minatravel2019@gmail.com</p>
-      </div>
-    </div>
-
-    <form id="contactForm" action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
-      <label for="name">Nom complet</label>
-      <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
-
-      <label for="email">Adresse e-mail</label>
-      <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
-
-      <button type="submit" class="btn-gold">Envoyer le message</button>
-
-      <div class="success-message" id="successMessage">✅ Message envoyé avec succès ! Nous vous répondrons dès que possible.</div>
+    <form action="#" method="post">
+      <input type="text" name="nom" placeholder="Nom complet" required>
+      <input type="email" name="email" placeholder="Adresse e-mail" required>
+      <input type="tel" name="telephone" placeholder="Numéro de téléphone">
+      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
 
+  <!-- 🌙 Pied de page -->
   <footer>
     <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
     <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
@@ -109,32 +53,10 @@
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
-  <!-- ✅ Script pour soumission du formulaire -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("successMessage");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-      if (response.ok) {
-        successMessage.style.display = "block";
-        form.reset();
-      }
-    });
-  </script>
-
-  <!-- ✅ Animation de transition -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("fade-in");
+      document.body.style.opacity = "1";
     });
   </script>
-
 </body>
 </html>
