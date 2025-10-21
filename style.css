@@ -1,801 +1,259 @@
-/* إعدادات عامة */
+/* 🎨 Mina Travel - Style global élégant doré et blanc */
+
+/* ----- RESET ----- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
 }
 
 body {
-  background-color: #f8f9fa;
-  direction: rtl;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffdf8;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* ===== رأس الصفحة (Header) ===== */
-header {
-  background-color: #00695c;
+/* ----- BARRE SUPÉRIEURE ----- */
+.top-bar {
+  background-color: #000;
   color: white;
+  text-align: right;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.top-bar a {
+  color: #d4af37;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+  color: white;
+}
+
+/* ----- EN-TÊTE / HEADER ----- */
+header {
+  background: linear-gradient(to right, #d4af37, #fff8e7);
+  color: #000;
   text-align: center;
-  padding: 20px 10px;
+  padding: 2rem 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+header .logo-container img {
+  height: 65px;
+  width: auto;
 }
 
 header h1 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #222;
 }
 
-/* ===== القائمة ===== */
+/* ----- NAVIGATION ----- */
 nav {
-  background-color: #00796b;
-  text-align: center;
-  padding: 10px 0;
+  margin-top: 1rem;
 }
 
 nav a {
-  color: white;
   text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: 0.3s;
+  color: #000;
+  font-weight: 600;
+  margin: 0 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-  color: #ffd54f;
+  border-bottom: 2px solid #b68c00;
+  color: #b68c00;
 }
 
-/* ===== أعلام اللغة ===== */
-.lang-switch {
-  margin-top: 5px;
-}
-
-.lang-switch img {
-  width: 35px;
-  height: 25px;
-  margin: 0 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.lang-switch img:hover {
-  transform: scale(1.1);
-}
-
-/* ===== قسم البطل (Hero Section) ===== */
+/* ----- SECTION HÉRO ----- */
 .hero {
-  background: url('background.jpg') no-repeat center center/cover;
-  height: 100vh;
-  color: white;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/Masjid_Putra%2C_Putrajaya_4.jpg');
+  background-size: cover;
+  background-position: center;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  padding: 6rem 1rem;
   position: relative;
 }
 
-/* طبقة داكنة خفيفة فوق الصورة */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 1;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
-/* النصوص فوق الصورة */
 .hero h2,
 .hero p,
-.hero button {
+.hero ul,
+.hero a {
   position: relative;
   z-index: 2;
 }
 
-/* العنوان */
 .hero h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
-  font-weight: bold;
+  color: #f8d87b;
+  margin-bottom: 1rem;
 }
 
-/* النص */
 .hero p {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-/* الزر */
-.hero button {
-  background-color: #ffd54f;
-  color: #004d40;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+.hero ul {
+  list-style: none;
+  margin-bottom: 1rem;
 }
 
-.hero button:hover {
-  background-color: #ffca28;
+.hero li {
+  margin: 0.3rem 0;
 }
 
-/* ===== الأقسام العامة ===== */
+.btn-gold {
+  display: inline-block;
+  background-color: #b68c00;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #d4af37;
+}
+
+/* ----- SERVICES & OFFRES ----- */
 section {
-  padding: 60px 20px;
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
-h3 {
-  color: #004d40;
-  margin-bottom: 30px;
+.services, .offers {
+  background-color: #fff;
+  border-top: 3px solid #d4af37;
 }
 
-/* ===== صناديق المحتوى ===== */
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.services h2,
+.offers h2 {
+  color: #b68c00;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
 }
 
-.card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 280px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* ===== نموذج الاتصال ===== */
-.contact-form {
+.services ul {
+  list-style: none;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
+.services li {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+}
+
+/* ----- CONTACT ----- */
+.contact-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-container h2 {
+  color: #b68c00;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  font-family: inherit;
   font-size: 1rem;
 }
 
-.contact-form button {
-  background-color: #00695c;
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  background-color: #b68c00;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 0.8rem;
+  border-radius: 25px;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #004d40;
+button:hover {
+  background-color: #d4af37;
 }
 
-/* ===== الفوتر ===== */
+.whatsapp-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.whatsapp-buttons a {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-buttons a:hover {
+  background-color: #1ebe5a;
+}
+
+/* ----- PIED DE PAGE ----- */
 footer {
-  background-color: #004d40;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-/* ===== للأرقام (LTR) ===== */
-.ltr {
-  direction: ltr;
-  text-align: left;
-  display: inline-block;
-}
-
-/* ===== تحسين العرض على الجوال ===== */
-@media (max-width: 768px) {
-  nav {
-    padding: 8px 0;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
-/* --- إصلاح عرض الخلفية على الحاسوب --- */
-.hero {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* تجعل الصورة ثابتة عند التمرير */
-  height: 100vh;
-  position: relative;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* لإخفاء الطبقة الرمادية القديمة إن كانت تغطي الصورة كليًا */
-.hero::before {
-  background-color: rgba(0, 0, 0, 0.35); /* تخفيف الظل لظهور الصورة أكثر */
-}
-
-/* === Section Hero avec effet Parallax === */
-.hero {
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* clé pour effet parallax */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Superposition légère pour lisibilité du texte */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.45); /* ombre légère */
-  z-index: 0;
-}
-
-/* Contenu du texte */
-.hero * {
-  position: relative;
-  z-index: 1;
-}
-
-/* --- Ajustement sur mobile pour éviter bug de fond fixe --- */
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll; /* le parallax peut causer des bugs sur mobile */
-  }
-}
-/* === Lisibilité du texte sur la section hero === */
-.hero h1,
-.hero h2,
-.hero p,
-.hero li {
-  color: #fff !important; /* يجعل النص أبيض بالكامل */
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* ظل خفيف للنص لزيادة الوضوح */
-}
-
-/* تحكم خاص بالزر */
-.hero button,
-.hero a.button {
-  background-color: #ffca28;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-.hero button:hover,
-.hero a.button:hover {
-  background-color: #ffc107;
-  transform: scale(1.05);
-}
-/* === Animation d’apparition du texte dans le hero === */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero h1,
-.hero h2,
-.hero p,
-.hero li,
-.hero a.button {
-  animation: fadeInUp 1.2s ease forwards;
-  opacity: 0; /* pour éviter l'affichage avant l'animation */
-}
-
-/* Délais progressifs pour chaque élément */
-.hero h1 {
-  animation-delay: 0.2s;
-}
-
-.hero p {
-  animation-delay: 0.4s;
-}
-
-.hero li {
-  animation-delay: 0.6s;
-}
-
-.hero a.button {
-  animation-delay: 0.8s;
-}
-/* === Animation d’apparition de l’image de fond === */
-.hero {
-  position: relative;
-  animation: fadeInBackground 2s ease-in-out forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInBackground {
-  0% {
-    opacity: 0;
-    filter: brightness(0.6) blur(2px);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(0.7) blur(0);
-  }
-}
-/* === تحسين زر احجز الآن === */
-.cta-button {
-  background-color: #ffcc00;
-  color: #000;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* تأثير عند تمرير الفأرة */
-.cta-button:hover {
-  background-color: #ffd633;
-  transform: scale(1.08);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* تأثير عند الضغط */
-.cta-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-/* === أزرار تغيير اللغة الجديدة === */
-.lang-switch {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.lang-btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #00796b;
-  font-weight: bold;
-  border: 2px solid #00796b;
-  border-radius: 20px;
-  padding: 6px 14px;
-  margin: 0 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-  background-color: #00796b;
+  background: #000;
   color: #fff;
-  transform: scale(1.1);
-}
-/* 🌐 أزرار تبديل اللغة */
-.lang-switch {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
-
-.lang-btn {
-  background-color: #ffffff;
-  color: #006644;
-  border: 1px solid #006644;
-  padding: 4px 10px;
-  margin-left: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-.lang-btn:hover {
-  background-color: #006644;
-  color: white;
-}
-/* ===== تأثير الانتقال السلس بين الصفحات (محسّن للموبايل) ===== */
-
-/* ===== إصلاح ظهور الصفحة ===== */
-body {
-  opacity: 1;
-  transition: opacity 0.6s ease-in-out;
-}
-/* === Logo Mina Travel dans le header === */
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
-  border-radius: 6px;
-}
-
-header .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-/* === شعار Mina Travel داخل الخط الأخضر === */
-header {
-  background-color: #00695c;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* حاوية الشعار */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* صورة الشعار */
-.logo {
-  height: 45px;
-  width: auto;
-  border-radius: 6px;
-}
-
-/* عنوان الشركة بجانب الشعار */
-.logo-container h1 {
-  font-size: 1.6rem;
-  margin: 0;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* الروابط */
-nav {
-  background-color: transparent; /* الشريط الأخضر يأتي من header */
   text-align: center;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #ffd54f;
-}
-
-/* أزرار اللغة */
-.lang-switch {
-  display: flex;
-  gap: 6px;
-}
-
-.lang-btn {
-  background: white;
-  color: #00695c;
-  border-radius: 4px;
-  padding: 4px 10px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.lang-btn:hover {
-  background: #ffd54f;
-  color: white;
-}
-/* === تحسين الهيدر والشعار === */
-header {
-  background-color: #00695c;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  position: fixed; /* يجعل الهيدر ثابت بالأعلى */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-
-/* لتفادي تغطية المحتوى */
-body {
-  padding-top: 80px;
-}
-
-/* الشعار */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  height: 55px;
-  width: auto;
-  border-radius: 6px;
-}
-
-/* اسم الشركة */
-.logo-container h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin: 0;
-}
-
-/* روابط القائمة */
-nav {
-  flex: 1;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #ffd54f;
-}
-
-/* أزرار اللغة */
-.lang-switch {
-  display: flex;
-  gap: 6px;
-}
-
-.lang-btn {
-  background: #fff;
-  color: #00695c;
-  border-radius: 5px;
-  padding: 4px 10px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid #00695c;
-}
-
-.lang-btn:hover {
-  background: #ffd54f;
-  color: #fff;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* الشريط الذهبي */
-.top-banner {
-    background: linear-gradient(to right, #d4af37, #f7e8b0);
-    text-align: center;
-    padding: 5px 0;
-    font-weight: bold;
-    color: #222;
-    letter-spacing: 1px;
-}
-
-/* شريط التنقل */
-.navbar {
-    background: #555; /* الرمادي الأنيق */
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* الروابط في صف أفقي */
-.nav-left ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-left a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.nav-left a:hover,
-.nav-left a.active {
-    color: #d4af37; /* ذهبي */
-}
-/* الشعار مع النص */
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* تباعد واضح بين الشعار والنص */
-    justify-content: flex-end; /* يجعل الشعار والنص بمحاذاة مناسبة */
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* لمسة خفيفة من اللمعان */
-}
-
-.brand-name {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.5px;
-}
-/* ===== شعار الموقع ===== */
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-.logo-section img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
-}
-
-.brand-name {
-    font-size: 1.6em;
-    font-weight: 700;
-    color: #fff;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-/* --- الشريط الذهبي العلوي --- */
-.top-bar {
-  background: linear-gradient(to right, #f8e7a2, #d3ad32);
-  text-align: center;
-  padding: 6px 0;
-  font-weight: 600;
-  color: #000;
-  font-size: 0.95rem;
-}
-
-/* --- شريط التنقل الرئيسي --- */
-.navbar {
-  background: #555;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 40px;
-  flex-wrap: wrap;
-}
-
-/* --- الشعار والاسم --- */
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.brand-name {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* --- القائمة --- */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #d3ad32;
-}
-
-/* --- زر تغيير اللغة --- */
-.lang-switch {
-  display: flex;
-  gap: 8px;
-}
-
-.lang-btn {
-  background: #d3ad32;
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  padding: 5px 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-  background: #f8e7a2;
-  color: #333;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
