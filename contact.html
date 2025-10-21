@@ -12,6 +12,24 @@
       text-align: left;
       display: inline-block;
     }
+
+    .success-message {
+      display: none;
+      background-color: #e0f2f1;
+      border: 2px solid #00695c;
+      color: #004d40;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
@@ -28,8 +46,8 @@
 
       <div class="lang-switcher">
         <div class="lang-switch">
-          <a href="index.html" class="lang-btn">AR</a>
-          <a href="index-fr.html" class="lang-btn">FR</a>
+          <a href="contact.html" class="lang-btn">AR</a>
+          <a href="contact-fr.html" class="lang-btn">FR</a>
         </div>
       </div>
     </div>
@@ -59,8 +77,7 @@
       </div>
     </div>
 
-    <!-- ✅ نموذج الاتصال الحقيقي -->
-    <form action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
+    <form id="contactForm" action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
       <label for="name">الاسم الكامل</label>
       <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
 
@@ -71,10 +88,11 @@
       <textarea id="message" name="message" rows="5" placeholder="أدخل رسالتك هنا..." required></textarea>
 
       <button type="submit" class="btn-gold">إرسال الرسالة</button>
+
+      <div class="success-message" id="successMessage">✅ تم إرسال الرسالة بنجاح! سنقوم بالرد في أقرب وقت.</div>
     </form>
   </section>
 
-  <!-- 🌙 تذييل الصفحة -->
   <footer>
     <p><strong>مكتبنا في المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
     <p><strong>مكتبنا في بلجيكا:</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
@@ -82,6 +100,25 @@
     <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+      }
+    });
+  </script>
 
 </body>
 </html>
