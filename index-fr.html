@@ -1,94 +1,348 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina Travel - Hajj & Omra</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mina Travel — Omra, Hajj & Séjours Halal</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
+    /* --- Styles locaux (خفيفة وتكميلية على style.css) --- */
+    :root{
+      --green: #00695c;
+      --gold: #d4af37;
+      --muted: #f5f6f7;
+      --text: #1f2d2d;
+      --card: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background: var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Header */
+    header{
+      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.65));
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      position: sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter: blur(6px);
+    }
+    .header-inner{
+      max-width:1180px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 20px;
+    }
+    .logo-wrap{ display:flex; align-items:center; gap:12px; }
+    .logo-wrap img{ height:54px; width:auto; border-radius:6px; object-fit:cover; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .site-title{ font-size:1.1rem; font-weight:700; color:var(--green); margin:0; letter-spacing:0.4px; }
+
+    nav.main-nav{ display:flex; gap:18px; align-items:center; }
+    nav.main-nav a{ text-decoration:none; color:var(--text); font-weight:600; padding:8px 10px; border-radius:6px; transition:all .18s ease; }
+    nav.main-nav a:hover, nav.main-nav a.active{ color:var(--green); background: rgba(0,0,0,0.02); }
+
+    .lang-switch { display:flex; gap:8px; }
+    .lang-btn{
+      background:#fff; color:var(--green); font-weight:700; padding:6px 10px; border-radius:8px; text-decoration:none;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .lang-btn:hover{ background:var(--gold); color:#fff; border-color:var(--gold); }
+
+    /* Hero */
+    .hero{
+      max-width:1180px;
+      margin:28px auto 12px;
+      display:flex;
+      align-items:center;
+      gap:28px;
+      padding:36px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+      border-radius:14px;
+      box-shadow: 0 6px 30px rgba(10,20,20,0.05);
+      overflow:hidden;
+    }
+    .hero-left{ flex:1; min-width:260px; }
+    .hero h1{ font-size:1.9rem; margin:0 0 12px; color:var(--text); }
+    .hero p.lead{ margin:0 0 18px; color:#536b69; font-size:1.05rem; line-height:1.6; }
+
+    .cta-row{ display:flex; gap:12px; align-items:center; margin-top:6px; }
+    .btn-primary{
+      background: linear-gradient(90deg,var(--gold),#ffdf80);
+      color:#111; padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:800;
+      box-shadow: 0 6px 20px rgba(212,175,55,0.15);
+    }
+    .btn-outline{ padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,0.06); color:var(--green); text-decoration:none; font-weight:700; }
+
+    .hero-right{ width:320px; display:flex; justify-content:center; align-items:center; }
+    .hero-visual{ width:100%; height:220px; background-image: url('background.jpg'); background-size:cover; background-position:center; border-radius:10px; box-shadow: 0 8px 28px rgba(0,0,0,0.06); }
+
+    /* Sections */
+    .container{ max-width:1180px; margin:30px auto; padding:0 20px; }
+    .section-title{ display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+    .section-title h2{ margin:0; font-size:1.4rem; color:var(--text); }
+    .cards{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+
+    .card{
+      background:var(--card); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(10,20,20,0.03);
+      display:flex; flex-direction:column; gap:12px; min-height:150px;
+    }
+    .card h3{ margin:0; font-size:1.05rem; color:var(--green); }
+    .card p{ margin:0; color:#576c69; flex:1; }
+
+    /* Offers */
+    .offers{
+      background: linear-gradient(180deg, rgba(255,250,240,1), rgba(255,255,255,1));
+      border-radius:12px; padding:20px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+      display:flex; gap:18px; align-items:center; justify-content:space-between;
+    }
+
+    /* Contact form */
+    .contact-area{ display:grid; grid-template-columns: 1fr 380px; gap:20px; align-items:start; margin-top:12px; }
+    .contact-card{
+      background:var(--card); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+    }
+    form .form-row{ display:flex; gap:10px; margin-bottom:12px; }
+    input[type="text"], input[type="email"], textarea{
+      width:100%; padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.08);
+      font-size:0.95rem;
+    }
+    button[type="submit"]{
+      background:var(--green); color:#fff; padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-weight:700;
+    }
+    .success{ display:none; padding:12px; background:#e6f7ef; border:1px solid #bde6d0; color:#0b6b4a; border-radius:8px; margin-top:10px; }
+
+    /* Footer */
+    footer.site-footer{ margin-top:40px; background:linear-gradient(180deg,#fff,#fafafa); padding:22px 0; border-top:1px solid rgba(0,0,0,0.04); }
+    .footer-inner{ max-width:1180px; margin:0 auto; padding:0 20px; display:flex; gap:20px; flex-wrap:wrap; justify-content:space-between; align-items:flex-start; }
+    .footer-col{ min-width:220px; }
+    .footer-col h4{ margin:0 0 8px; color:var(--green); }
+    .small { color:#6b7b79; font-size:0.95rem; }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{ flex-direction:column; padding:20px; }
+      .hero-right{ width:100%; order:-1; }
+      .contact-area{ grid-template-columns: 1fr; }
+      .header-inner{ padding:12px 16px; }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- 🌍 En-tête -->
+  <!-- HEADER -->
   <header>
-    <div class="navbar">
-      <div class="lang-switch">
-        <a href="index.html" class="lang-btn">AR</a>
-        <a href="index-fr.html" class="lang-btn">FR</a>
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel logo">
+        <div>
+          <div class="site-title">Mina Travel</div>
+          <div style="font-size:12px;color:#6b7b79">Omra, Hajj & Séjours Halal</div>
+        </div>
       </div>
 
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-        <h1>Mina Travel</h1>
-      </div>
-
-      <nav>
+      <nav class="main-nav" aria-label="Main Navigation">
         <a href="index-fr.html" class="active">Accueil</a>
         <a href="#services">Nos Services</a>
         <a href="#offers">Nos Offres</a>
-        <a href="contact-fr.html">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <div class="lang-switch" aria-hidden="false">
+        <a class="lang-btn" href="index.html">AR</a>
+        <a class="lang-btn" href="index-fr.html">FR</a>
+      </div>
     </div>
   </header>
 
-  <!-- ✨ Section principale -->
-  <section class="hero">
-    <h2>Votre voyage pour la Omra commence avec nous !</h2>
-    <p>Nous vous offrons tout ce dont vous avez besoin :</p>
-    <ul>
-      <li>Encadrement par un guide religieux expérimenté</li>
-      <li>Visa Omra ou visa touristique</li>
-      <li>Réservation d’hôtels et de vols</li>
-      <li>Transferts confortables depuis et vers l’aéroport</li>
-      <li>Omra par procuration pour les malades ou les défunts</li>
-      <li>Visites religieuses et historiques</li>
-      <li>Assistance aux hommes d’affaires</li>
-    </ul>
-    <p>Avec nous... votre sérénité et votre adoration sont notre priorité 🌙</p>
+  <!-- HERO -->
+  <main class="container" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <h1 id="hero-title">Partez pour la Omra en toute sérénité avec Mina Travel</h1>
+        <p class="lead">Programmes personnalisés — hôtels conformes aux normes halal — accompagnement religieux professionnel. Nous organisons votre voyage du départ jusqu’au retour, avec soin et respect.</p>
 
-    <a href="contact-fr.html" class="btn-gold">Réserver maintenant</a>
-  </section>
+        <div class="cta-row">
+          <a class="btn-primary" href="#contact">Réserver maintenant</a>
+          <a class="btn-outline" href="#services">Découvrir nos services</a>
+        </div>
+      </div>
 
-  <!-- 🕋 Nos Services -->
-  <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <ul>
-      <li>Visa Omra et visa touristique</li>
-      <li>Réservation d’hôtels et de vols</li>
-      <li>Transferts confortables depuis et vers l’aéroport</li>
-      <li>Omra par procuration pour les malades et défunts</li>
-      <li>Visites religieuses et historiques</li>
-    </ul>
-  </section>
+      <div class="hero-right">
+        <div class="hero-visual" role="img" aria-label="Mina Travel visual"></div>
+      </div>
+    </section>
 
-  <!-- 💎 Nos Offres -->
-  <section id="offers" class="offers">
-    <h2>Nos Offres</h2>
-    <p>Profitez dès maintenant de réductions spéciales sur nos programmes de Omra pour le mois de Ramadan !</p>
-    <a href="contact-fr.html" class="btn-gold">Réserver une offre</a>
-  </section>
+    <!-- SERVICES -->
+    <section id="services" style="margin-top:28px;">
+      <div class="section-title">
+        <h2>Nos Services</h2>
+      </div>
 
-  <!-- 🌙 Pied de page -->
-  <footer>
-    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
-    <p>📧 minatravel2019@gmail.com</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Omra & Hajj guidés</h3>
+          <p>Programmes complets avec encadrement religieux, transport, et accompagnement 24/7 pendant vos rites.</p>
+        </article>
+
+        <article class="card">
+          <h3>Hébergement halal et séjours</h3>
+          <p>Partenariats avec hôtels certifiés et établissements adaptés (Turquie, Malaisie, Arabie Saoudite) pour un séjour confortable.</p>
+        </article>
+
+        <article class="card">
+          <h3>Visas & Formalités</h3>
+          <p>Gestion complète des démarches de visa Omra/touristique et assistance administrative pour groupes et individuels.</p>
+        </article>
+
+        <article class="card">
+          <h3>Vols & Transferts</h3>
+          <p>Réservation vols, transferts privés et navettes, organisation logistique depuis et vers l’aéroport.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- OFFERS -->
+    <section id="offers" style="margin-top:28px;">
+      <div class="section-title"><h2>Nos Offres Spéciales</h2></div>
+
+      <div class="offers">
+        <div style="flex:1;">
+          <h3 style="margin:0 0 8px;">Offre Ramadan — Pack Omra Confort</h3>
+          <p class="small" style="margin:0 0 12px;">Forfaits tout compris : hébergement 4★, vols, transferts, et guide. Places limitées.</p>
+          <a class="btn-primary" href="#contact">Demander l'offre</a>
+        </div>
+        <div style="min-width:280px;">
+          <ul style="margin:0; padding-left:16px; color:#445d5a;">
+            <li>Tarifs groupes & réductions famille</li>
+            <li>Options VIP & Omra sur mesure</li>
+            <li>Assistance business & packages hommes d’affaires</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:28px;">
+      <div class="section-title"><h2>Contactez-nous</h2></div>
+
+      <div class="contact-area">
+        <!-- Left: form -->
+        <div class="contact-card">
+          <h3>Envoyez-nous un message</h3>
+          <p class="small">Remplissez le formulaire ci-dessous. Nous répondons habituellement sous 24–48h.</p>
+
+          <form id="contactForm" action="https://formspree.io/f/mzzjqjog" method="POST">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Nom complet" required>
+            </div>
+            <div class="form-row">
+              <input type="email" name="_replyto" placeholder="Email" required>
+            </div>
+            <div class="form-row">
+              <input type="text" name="phone" placeholder="Téléphone (optionnel)">
+            </div>
+            <div class="form-row">
+              <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+            </div>
+
+            <!-- Optional: redirect if you create a thankyou.html -->
+            <!-- <input type="hidden" name="_next" value="https://minatravel.github.io/thankyou.html"> -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit">Envoyer</button>
+            <div class="success" id="successMessage">✅ Votre message a bien été envoyé — nous vous répondrons bientôt.</div>
+          </form>
+        </div>
+
+        <!-- Right: contact info -->
+        <div>
+          <div class="contact-card">
+            <h4>Nos bureaux</h4>
+            <p class="small"><strong>Maroc :</strong><br>Avenue Hassan II, Témara Centre 12000<br>📞 <span class="ltr">+212 661 865 316</span></p>
+            <p class="small"><strong>Belgique :</strong><br>Rue de Fiennes 46, 1070 Anderlecht<br>📞 <span class="ltr">+32 487 491 576</span></p>
+            <p class="small">📧 minatravel2019@gmail.com</p>
+          </div>
+
+          <div class="contact-card" style="margin-top:12px;">
+            <h4>Services Hôteliers</h4>
+            <p class="small">Nous travaillons avec des hôtels certifiés halal en Turquie, Malaisie et destinations internationales. Demandez nos programmes sur-mesure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Mina Travel</h4>
+        <p class="small">Agence spécialisée Hajj, Omra & Séjours Halal. Service fiable et expérience professionnelle.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liens rapides</h4>
+        <p class="small">
+          <a href="index-fr.html" style="color:var(--green); text-decoration:none;">Accueil</a> ·
+          <a href="#services" style="color:var(--green); text-decoration:none;">Services</a> ·
+          <a href="#offers" style="color:var(--green); text-decoration:none;">Offres</a> ·
+          <a href="#contact" style="color:var(--green); text-decoration:none;">Contact</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p class="small">📞 <span class="ltr">+212 661 865 316</span><br>📧 minatravel2019@gmail.com</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
+    // Formspree AJAX submit to show success message without redirect
+    (function(){
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('successMessage');
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        const fd = new FormData(form);
+        try {
+          const res = await fetch(form.action, {
+            method: form.method,
+            body: fd,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            success.style.display = 'block';
+            form.reset();
+          } else {
+            const data = await res.json();
+            alert(data.error || 'Erreur : impossible d\'envoyer le message pour le moment.');
+          }
+        } catch (err) {
+          alert('Erreur réseau — veuillez réessayer plus tard.');
+        }
+      });
+    })();
+
+    // small improvement: active nav on click (for a single page)
+    document.querySelectorAll('nav.main-nav a').forEach(a=>{
+      a.addEventListener('click', ()=> {
+        document.querySelectorAll('nav.main-nav a').forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+      });
     });
   </script>
-
 </body>
 </html>
