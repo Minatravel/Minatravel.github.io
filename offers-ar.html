@@ -3,17 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عروضنا - Mina Travel</title>
+  <title>عروضنا - شركة مِنى للسفر</title>
   <style>
     body {
       margin: 0;
-      font-family: "Tajawal", sans-serif;
+      font-family: "Cairo", sans-serif;
       background-color: #fffaf2;
       color: #222;
     }
 
+    /* 🔹 الشريط العلوي للّغة */
+    .top-bar {
+      background-color: #000;
+      color: white;
+      text-align: left;
+      padding: 0.5rem 1.5rem;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+
+    .top-bar a {
+      color: #d4af37;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .top-bar a:hover {
+      color: white;
+    }
+
     header {
-      background: linear-gradient(to right, #d4af37, #fff8e7);
+      background: linear-gradient(to left, #d4af37, #fff8e7);
       color: #000;
       text-align: center;
       padding: 1.5rem 0;
@@ -93,14 +115,19 @@
 </head>
 <body>
 
-  <header>🌍 عروض Mina Travel – رحلات حول العالم</header>
+  <!-- 🔹 الشريط العلوي -->
+  <div class="top-bar">
+    <a href="offers.html">AR</a> | <a href="offers-fr.html">FR</a>
+  </div>
+
+  <header>🌍 عروض مِنى للسفر – رحلات حول العالم بروحٍ إسلامية</header>
 
   <section class="offers-container">
     <div class="offer-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Masjid_al-Haram_Makkah.jpg/1200px-Masjid_al-Haram_Makkah.jpg" alt="مكة المكرمة">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Masjid_al-Haram_Makkah.jpg/1200px-Masjid_al-Haram_Makkah.jpg" alt="Omra">
       <div class="offer-content">
-        <h3>عمرة رمضان المبارك</h3>
-        <p>رحلة روحانية مميزة تشمل الإقامة قرب الحرم المكي مع خدمات مريحة.</p>
+        <h3>عمرة رمضان</h3>
+        <p>رحلة روحانية مميزة مع إقامة قريبة من الحرم وخدمات متكاملة.</p>
         <a href="contact.html">احجز الآن</a>
       </div>
     </div>
@@ -108,8 +135,8 @@
     <div class="offer-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bosphorus_Bridge_Istanbul.jpg/1200px-Bosphorus_Bridge_Istanbul.jpg" alt="تركيا">
       <div class="offer-content">
-        <h3>رحلة إسطنبول الحلال</h3>
-        <p>اكتشف سحر تركيا مع إقامة في فنادق إسلامية وخدمة فاخرة.</p>
+        <h3>رحلة إلى إسطنبول</h3>
+        <p>اكتشف سحر تركيا مع فنادق حلال وخدمات راقية تناسب العائلات.</p>
         <a href="contact.html">احجز الآن</a>
       </div>
     </div>
@@ -117,8 +144,8 @@
     <div class="offer-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Masjid_Putra_Putrajaya_Malaysia.jpg/1200px-Masjid_Putra_Putrajaya_Malaysia.jpg" alt="ماليزيا">
       <div class="offer-content">
-        <h3>إقامة فاخرة في كوالالمبور</h3>
-        <p>استمتع بإجازة راقية في فنادق حلال مع مناظر خلابة وخدمات متميزة.</p>
+        <h3>رحلة إلى كوالالمبور</h3>
+        <p>استمتع بإقامة فاخرة في فنادق حلال 5★ مع جولات ثقافية رائعة.</p>
         <a href="contact.html">احجز الآن</a>
       </div>
     </div>
@@ -126,15 +153,15 @@
     <div class="offer-card">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dubai_Marina_skyline_2017.jpg/1200px-Dubai_Marina_skyline_2017.jpg" alt="دبي">
       <div class="offer-content">
-        <h3>عطلة عائلية في دبي</h3>
-        <p>تجربة تسوق وترفيه راقية مع سكن حلال في قلب دبي.</p>
+        <h3>إجازة عائلية في دبي</h3>
+        <p>تسوّق، استرخاء، وإقامة حلال في أجمل فنادق دبي.</p>
         <a href="contact.html">احجز الآن</a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 Mina Travel – جميع الحقوق محفوظة.
+    © 2025 مِنى للسفر – جميع الحقوق محفوظة.
   </footer>
 
 </body>
