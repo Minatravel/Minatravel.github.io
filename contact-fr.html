@@ -7,185 +7,169 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      margin: 0;
       font-family: "Poppins", sans-serif;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
-      background-attachment: fixed;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .top-banner {
-      background: linear-gradient(to right, #fff8dc, #d4af37);
-      color: #222;
-      text-align: center;
-      font-weight: 600;
-      padding: 8px 0;
-      font-size: 15px;
-      letter-spacing: 1px;
+      background-color: #fffaf0;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 15px 40px;
+      background-color: #fff;
+      border-bottom: 3px solid #d4af37;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo-container {
-      display: flex;
       align-items: center;
-      gap: 10px;
+      padding: 15px 40px;
     }
 
-    .logo {
-      width: 70px;
-      height: auto;
-      border-radius: 10px;
+    header img {
+      height: 60px;
     }
 
     nav a {
       text-decoration: none;
-      color: white;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
+      color: #333;
+      margin: 0 12px;
+      font-weight: bold;
     }
 
-    nav a:hover, nav a.active {
+    nav a.active, nav a:hover {
       color: #d4af37;
     }
 
-    .lang-switch {
-      display: flex;
-      gap: 8px;
-      position: absolute;
-      right: 20px;
-    }
-
-    .lang-btn {
-      border: 1px solid #d4af37;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 5px;
+    .lang-switch a {
       text-decoration: none;
-      font-size: 14px;
-      transition: all 0.3s;
-    }
-
-    .lang-btn:hover {
-      background: #d4af37;
-      color: #000;
+      margin-left: 10px;
+      color: #333;
+      font-weight: bold;
     }
 
     .contact-section {
-      background: rgba(0, 0, 0, 0.75);
-      max-width: 700px;
-      margin: 80px auto;
-      padding: 40px;
-      border-radius: 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     .contact-section h2 {
       color: #d4af37;
-      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .contact-section p {
+      color: #555;
     }
 
     .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
+      max-width: 500px;
+      margin: 30px auto;
+      text-align: left;
     }
 
-    .contact-form input, .contact-form textarea {
+    .contact-form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      font-size: 1rem;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
     }
 
     .contact-form button {
-      background: linear-gradient(45deg, #d4af37, #fff8dc);
-      color: #000;
+      background-color: #d4af37;
+      color: white;
       border: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 30px;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border-radius: 8px;
       cursor: pointer;
-      font-weight: bold;
-      transition: transform 0.3s;
+      margin-top: 10px;
+      transition: background 0.3s ease;
     }
 
     .contact-form button:hover {
-      transform: scale(1.05);
+      background-color: #b8962e;
+    }
+
+    .contact-container {
+      margin-top: 30px;
+    }
+
+    .whatsapp-buttons a {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-buttons a:hover {
+      background-color: #1da851;
     }
 
     footer {
-      background: #111;
+      background-color: #fff;
+      border-top: 2px solid #d4af37;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+      color: #555;
       font-size: 0.9em;
-      margin-top: 60px;
     }
   </style>
 </head>
-
 <body>
-  <div class="top-banner">
-    ✨ Séjours Halal à travers le monde — Sérénité, foi et élégance ✨
-  </div>
 
   <header>
-    <div class="logo-container">
-      <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-      <h1>Mina Travel</h1>
-    </div>
-
+    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Logo Mina Travel">
     <nav>
       <a href="index-fr.html">Accueil</a>
-      <a href="index-fr.html#services">Nos Services</a>
-      <a href="index-fr.html#offers">Nos Offres</a>
+      <a href="offers-fr.html">Nos Offres</a>
       <a href="contact-fr.html" class="active">Contact</a>
     </nav>
-
     <div class="lang-switch">
-      <a href="contact.html" class="lang-btn">AR</a>
-      <a href="contact-fr.html" class="lang-btn">FR</a>
+      <a href="contact.html">AR</a>
+      <a href="contact-fr.html">FR</a>
     </div>
   </header>
 
   <section class="contact-section">
     <h2>Contactez-nous</h2>
-    <p>Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais.</p>
+    <p>Nous serons ravis de répondre à vos questions concernant nos offres Omra, nos séjours halal et nos services de voyage.</p>
 
-    <form class="contact-form" action="https://formspree.io/f/mzzjqjog" method="POST">
-      <input type="text" name="name" placeholder="Votre nom complet" required>
-      <input type="email" name="email" placeholder="Votre adresse e-mail" required>
-      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+    <form action="https://formspree.io/f/mzzjqjog" method="POST" class="contact-form">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Adresse e-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
       <button type="submit">Envoyer le message</button>
     </form>
+
+    <div class="contact-container">
+      <div class="whatsapp-buttons" style="text-align:center;">
+        <a href="https://wa.me/32487491576" target="_blank">💬 WhatsApp (Belgique)</a>
+        <a href="https://wa.me/212661865316" target="_blank">💬 WhatsApp (Maroc)</a>
+      </div>
+    </div>
   </section>
 
   <footer>
     <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Vienne 46, 1070 Anderlecht</p>
-    <p>📞 +212 661 865 316 (Maroc)</p>
-    <p>📞 +32 487 491 576 (Belgique)</p>
+    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
-  </script>
 </body>
 </html>
