@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اتصل بنا - منا ترافل</title>
+  <title>اتصل بنا - Mina Travel</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -12,23 +12,22 @@
       background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
       background-attachment: fixed;
       color: #fff;
-      transition: opacity 1s ease-in-out;
       opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
     .top-banner {
-      background: linear-gradient(to left, #d4af37, #fff8dc);
+      background: linear-gradient(to left, #fff8dc, #d4af37);
       color: #222;
       text-align: center;
       font-weight: 600;
       padding: 8px 0;
       font-size: 15px;
       letter-spacing: 1px;
-      animation: fadeIn 2s ease;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.65);
       padding: 15px 40px;
       display: flex;
       align-items: center;
@@ -66,7 +65,7 @@
       display: flex;
       gap: 8px;
       position: absolute;
-      right: 20px;
+      left: 20px;
     }
 
     .lang-btn {
@@ -85,40 +84,44 @@
     }
 
     .contact-section {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 60px 20px;
-      margin: 60px auto;
-      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.75);
       max-width: 700px;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 20px;
       text-align: center;
     }
 
     .contact-section h2 {
       color: #d4af37;
-      font-size: 2em;
       margin-bottom: 20px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
       width: 100%;
       padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
       border-radius: 10px;
+      border: none;
       font-size: 1rem;
-      outline: none;
+      text-align: right;
     }
 
     .contact-form button {
       background: linear-gradient(45deg, #d4af37, #fff8dc);
       color: #000;
       border: none;
-      padding: 12px 30px;
-      border-radius: 30px;
+      padding: 12px;
       font-size: 16px;
-      font-weight: bold;
+      border-radius: 30px;
       cursor: pointer;
+      font-weight: bold;
       transition: transform 0.3s;
     }
 
@@ -133,32 +136,18 @@
       font-size: 0.9em;
       margin-top: 60px;
     }
-
-    .ltr {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-      text-align: left;
-      display: inline-block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
   </style>
 </head>
 
 <body>
-  <!-- ✨ شريط علوي -->
   <div class="top-banner">
-    ✨ رحلات حلال حول العالم — راحة، روحانية، وأناقة ✨
+    ✨ رحلات حلال حول العالم — راحة، إيمان وأناقة ✨
   </div>
 
-  <!-- 🌍 رأس الصفحة -->
   <header>
     <div class="logo-container">
-      <img src="Logo_2025-10-20_19-32-35.jpg" alt="شعار منا ترافل" class="logo">
-      <h1>منا ترافل</h1>
+      <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+      <h1>Mina Travel</h1>
     </div>
 
     <nav>
@@ -174,26 +163,23 @@
     </div>
   </header>
 
-  <!-- ✉️ قسم الاتصال -->
   <section class="contact-section">
-    <h2>📩 تواصل معنا</h2>
-    <p>يسعدنا تواصلك معنا لأي استفسار أو حجز.</p>
+    <h2>اتصل بنا</h2>
+    <p>يرجى ملء النموذج أدناه وسنتواصل معك في أقرب وقت ممكن.</p>
 
     <form class="contact-form" action="https://formspree.io/f/mzzjqjog" method="POST">
       <input type="text" name="name" placeholder="الاسم الكامل" required>
       <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-      <input type="text" name="subject" placeholder="الموضوع">
-      <textarea name="message" rows="5" placeholder="رسالتك..." required></textarea>
+      <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
       <button type="submit">إرسال الرسالة</button>
     </form>
   </section>
 
-  <!-- 🌙 التذييل -->
   <footer>
-    <p><strong>مكتب المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
-    <p><strong>مكتب بلجيكا:</strong> شارع دو فيين 46، 1070 أندرليخت</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (المغرب)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
+    <p><strong>المكتب في المغرب:</strong> شارع الحسن الثاني، تمارة المركز 12000</p>
+    <p><strong>المكتب في بلجيكا:</strong> شارع فيينا 46، أندرلخت 1070</p>
+    <p>📞 +212 661 865 316 (المغرب)</p>
+    <p>📞 +32 487 491 576 (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
 
