@@ -694,3 +694,27 @@ html {
     color: #fff;
     letter-spacing: 0.5px;
 }
+/* ===== شعار الموقع ===== */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.logo-section img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+}
+
+.brand-name {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
