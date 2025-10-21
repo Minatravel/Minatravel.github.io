@@ -672,24 +672,25 @@ html {
 .nav-left a.active {
     color: #d4af37; /* ذهبي */
 }
-
-/* الشعار والنص */
+/* الشعار مع النص */
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px; /* تباعد واضح بين الشعار والنص */
+    justify-content: flex-end; /* يجعل الشعار والنص بمحاذاة مناسبة */
 }
 
 .logo {
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     object-fit: cover;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* لمسة خفيفة من اللمعان */
 }
 
 .brand-name {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: white;
-    margin-top: 5px;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
 }
