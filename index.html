@@ -14,25 +14,27 @@
     }
   </style>
 </head>
-  <body>
-<!-- زر العودة للأعلى -->
-<button id="backToTop" title="العودة للأعلى">⬆️</button>
+<body>
 
-<script>
-  const backToTopButton = document.getElementById("backToTop");
+  <!-- زر العودة للأعلى -->
+  <button id="backToTop" title="العودة للأعلى">⬆️</button>
 
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  };
+  <script>
+    const backToTopButton = document.getElementById("backToTop");
 
-  backToTopButton.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-</script>
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
   <!-- 🌍 رأس الصفحة -->
   <header>
     <div class="navbar">
@@ -44,21 +46,13 @@
         <a href="#offers">العروض</a>
         <a href="contact.html">اتصل بنا</a>
       </nav>
-<header>
-  <h1>مِنى ترافل - Mina Travel</h1>
-</header>
 
-<nav>
-  <a href="#">الرئيسية</a>
-  <a href="#">خدماتنا</a>
-  <a href="#">العروض</a>
-  <a href="contact.html">اتصل بنا</a>
-</nav>
-<!-- 🌐 أزرار اختيار اللغة -->
-<div class="lang-switch">
-  <a href="index.html" class="lang-btn">AR</a>
-  <a href="index-fr.html" class="lang-btn">FR</a>
-</div>
+      <!-- 🌐 أزرار اختيار اللغة -->
+      <div class="lang-switch">
+        <a href="index.html" class="lang-btn">AR</a>
+        <a href="index-fr.html" class="lang-btn">FR</a>
+      </div>
+    </div>
   </header>
 
   <!-- ✨ قسم البداية -->
@@ -106,16 +100,13 @@
     <p>📞 <span class="ltr">+32 487 491 576</span> (بلجيكا)</p>
     <p>📧 minatravel2019@gmail.com</p>
   </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = "1";
-  });
-</script>
+
+  <!-- ✅ كود لإظهار الصفحة بعد التحميل -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "1";
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
