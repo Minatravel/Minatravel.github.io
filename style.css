@@ -447,6 +447,27 @@ body {
   opacity: 1;
   transition: opacity 0.6s ease-in-out;
 }
+/* === Logo Mina Travel dans le header === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 
 
 
