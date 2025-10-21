@@ -540,6 +540,89 @@ nav a.active {
   background: #ffd54f;
   color: white;
 }
+/* === تحسين الهيدر والشعار === */
+header {
+  background-color: #00695c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: fixed; /* يجعل الهيدر ثابت بالأعلى */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* لتفادي تغطية المحتوى */
+body {
+  padding-top: 80px;
+}
+
+/* الشعار */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 55px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* اسم الشركة */
+.logo-container h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* روابط القائمة */
+nav {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffd54f;
+}
+
+/* أزرار اللغة */
+.lang-switch {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-btn {
+  background: #fff;
+  color: #00695c;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #00695c;
+}
+
+.lang-btn:hover {
+  background: #ffd54f;
+  color: #fff;
+}
+
 
 
 
