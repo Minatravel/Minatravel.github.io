@@ -392,6 +392,31 @@ footer {
   transform: scale(0.98);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+/* === أزرار تغيير اللغة الجديدة === */
+.lang-switch {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.lang-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #00796b;
+  font-weight: bold;
+  border: 2px solid #00796b;
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin: 0 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #00796b;
+  color: #fff;
+  transform: scale(1.1);
+}
+
 
 
 
