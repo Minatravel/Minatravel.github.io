@@ -1,230 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منا ترافل - عمرة وحج وسياحة حلال</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: "Cairo", sans-serif;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Masjid_Putra_Putrajaya_Malaysia.jpg') no-repeat center center/cover;
-      background-attachment: fixed;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .top-banner {
-      background: linear-gradient(to left, #fff8dc, #d4af37);
-      color: #222;
-      text-align: center;
-      font-weight: 600;
-      padding: 8px 0;
-      font-size: 15px;
-      letter-spacing: 1px;
-      animation: fadeIn 2s ease;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.65);
-      padding: 15px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      width: 70px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover, nav a.active {
-      color: #d4af37;
-    }
-
-    .lang-switch {
-      display: flex;
-      gap: 8px;
-      position: absolute;
-      left: 20px;
-    }
-
-    .lang-btn {
-      border: 1px solid #d4af37;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: all 0.3s;
-    }
-
-    .lang-btn:hover {
-      background: #d4af37;
-      color: #000;
-    }
-
-    .hero {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 100px 20px;
-      border-radius: 20px;
-      margin: 60px auto;
-      max-width: 900px;
-    }
-
-    .hero h2 {
-      color: #d4af37;
-      font-size: 2.3em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      line-height: 1.8;
-    }
-
-    .btn-gold {
-      background: linear-gradient(45deg, #d4af37, #fff8dc);
-      color: #000;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-
-    .btn-gold:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 40px 20px;
-      margin: 60px auto;
-      border-radius: 20px;
-      max-width: 900px;
-    }
-
-    section h2 {
-      color: #d4af37;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    section ul {
-      list-style: none;
-      padding: 0;
-      text-align: right;
-      line-height: 2;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9em;
-      margin-top: 60px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منى ترافل | Mina Travel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="top-banner">
-    ✨ رحلات حلال حول العالم — راحة، روحانية، وأناقة ✨
-  </div>
-
-  <header>
-    <div class="logo-container">
-      <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
-      <h1>منا ترافل</h1>
+    <!-- الشريط الذهبي التعريفي -->
+    <div class="top-banner">
+        ✨ رحلات حلال حول العالم — راحة، روحانية، وأناقة ✨
     </div>
 
-    <nav>
-      <a href="index.html" class="active">الرئيسية</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#offers">عروضنا</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
+    <!-- رأس الصفحة -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="offers.html">عروضنا</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
 
-    <div class="lang-switch">
-      <a href="index.html" class="lang-btn">AR</a>
-      <a href="index-fr.html" class="lang-btn">FR</a>
-    </div>
-  </header>
+            <div class="nav-right">
+                <div class="logo-section">
+                    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+                    <span class="brand-name">منى ترافل</span>
+                </div>
+                <div class="lang-switch">
+                    <a href="index-fr.html" class="lang-btn">FR</a>
+                    <a href="index.html" class="lang-btn active">AR</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <section class="hero">
-    <h2>ابدأ رحلتك للعمرة معنا!</h2>
-    <p>نوفر لك كل ما تحتاجه لرحلة مليئة بالسكينة والإيمان:</p>
-    <ul>
-      <li>تأطير من مرشد ديني ذو خبرة</li>
-      <li>تأشيرة عمرة أو سياحية</li>
-      <li>حجوزات فنادق ورحلات جوية</li>
-      <li>نقل مريح من وإلى المطار</li>
-      <li>عمرة بالنيابة للمرضى أو المتوفين</li>
-      <li>زيارات دينية وتاريخية</li>
-    </ul>
-    <a href="contact.html" class="btn-gold">احجز الآن</a>
-  </section>
-
-  <section id="services">
-    <h2>خدماتنا</h2>
-    <ul>
-      <li>تأشيرات العمرة والسياحة</li>
-      <li>حجوزات الفنادق والطيران</li>
-      <li>تنقلات مريحة من وإلى المطار</li>
-      <li>عمرة بالنيابة</li>
-      <li>برامج دينية وثقافية</li>
-    </ul>
-  </section>
-
-  <section id="offers">
-    <h2>عروضنا</h2>
-    <p>استفد الآن من خصوماتنا الخاصة لرحلات عمرة رمضان المبارك!</p>
-    <a href="contact.html" class="btn-gold">احجز عرضك</a>
-  </section>
-
-  <footer>
-    <p><strong>المكتب بالمغرب:</strong> شارع الحسن الثاني، تمارة 12000</p>
-    <p><strong>المكتب ببلجيكا:</strong> Rue de Vienne 46, 1070 Anderlecht</p>
-    <p>📞 +212 661 865 316 (المغرب)</p>
-    <p>📞 +32 487 491 576 (بلجيكا)</p>
-    <p>📧 minatravel2019@gmail.com</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
-  </script>
+    <!-- قسم المقدمة -->
+    <section class="hero" style="background-image: url('mosque-malaysia.jpg');">
+        <div class="hero-content">
+            <h1>رحلتك للعُمرة تبدأ معنا!</h1>
+            <p>
+                نحن نقدم لك كل ما تحتاجه لرحلة مريحة ومميزة:  
+                تأشيرات، حجوزات فنادق، رحلات جوية، نقل مريح، زيارات دينية.  
+                معنا... راحتك وعبادتك أولويتنا 🌙
+            </p>
+            <a href="contact.html" class="cta-button">احجز الآن</a>
+        </div>
+    </section>
 </body>
 </html>
