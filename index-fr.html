@@ -33,14 +33,9 @@
       padding: 10px 40px;
     }
 
-    header .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
     header img {
       height: 55px;
+      margin-right: 10px;
       border-radius: 10px;
     }
 
@@ -67,4 +62,109 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color:
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #fff7db;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #f5e8b8;
+    }
+
+    .hero button {
+      background-color: #d4af37;
+      border: none;
+      padding: 12px 28px;
+      font-size: 18px;
+      color: #333;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Sélecteur de langue */
+    .lang-switch {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+
+    .lang-switch a {
+      color: #000;
+      background: #fff6d6;
+      padding: 5px 12px;
+      margin-left: 6px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #c6a43d;
+      transition: 0.3s;
+    }
+
+    .lang-switch a:hover {
+      background: #d4af37;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Bande supérieure -->
+  <div class="top-banner">✨ Voyages à travers le monde — Sérénité, foi et élégance ✨</div>
+
+  <!-- En-tête -->
+  <header>
+    <div class="logo-section">
+      <img src="logo.png" alt="Mina Travel Logo">
+      <strong>Mina Travel</strong>
+    </div>
+    <nav>
+      <a href="index-fr.html">Accueil</a>
+      <a href="services-fr.html">Nos Services</a>
+      <a href="offers-fr.html">Nos Offres</a>
+      <a href="contact-fr.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Section principale -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Votre voyage pour la Omra commence avec nous !</h1>
+      <p>Nous offrons des séjours confortables et spirituels alliant foi, détente et élégance — votre sérénité est notre priorité.</p>
+      <button>Réserver maintenant</button>
+    </div>
+
+    <!-- Changement de langue -->
+    <div class="lang-switch">
+      <a href="index.html">AR</a>
+      <a href="index-fr.html">FR</a>
+    </div>
+  </section>
+
+</body>
+</html>
