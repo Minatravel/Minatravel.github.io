@@ -5,58 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Mina Travel</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; opacity: 0; transition: opacity 0.5s; }
+    header {
+      background-color: #006b5b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+    }
+
+    .logo-container { display: flex; align-items: center; gap: 10px; }
+    .logo { width: 50px; height: 50px; border-radius: 6px; object-fit: cover; }
+
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover, nav a.active { color: #ffcc00; }
+
+    .lang-switch { display: flex; gap: 8px; }
+    .lang-btn { background: white; color: black; padding: 4px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #006b5b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover { background-color: #004d40; }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ✅ En-tête -->
-  <header>
-    <div class="navbar">
-      <div class="logo-container">
-        <img src="Logo_2025-10-20_19-32-35.jpg" alt="Logo Mina Travel" class="logo">
-        <h1>Mina Travel</h1>
-      </div>
+<header>
+  <div class="logo-container">
+    <img src="Logo_2025-10-20_19-32-35.jpg" alt="Mina Travel Logo" class="logo">
+    <h1>Mina Travel</h1>
+  </div>
 
-      <nav>
-        <a href="index-fr.html">Accueil</a>
-        <a href="index-fr.html#services">Nos Services</a>
-        <a href="index-fr.html#offers">Nos Offres</a>
-        <a href="contact-fr.html" class="active">Contact</a>
-      </nav>
+  <nav>
+    <a href="index-fr.html">Accueil</a>
+    <a href="services.html">Nos Services</a>
+    <a href="offers.html">Nos Offres</a>
+    <a href="contact-fr.html" class="active">Contact</a>
+  </nav>
 
-      <div class="lang-switch">
-        <a href="contact.html" class="lang-btn">AR</a>
-        <a href="contact-fr.html" class="lang-btn">FR</a>
-      </div>
-    </div>
-  </header>
+  <div class="lang-switch">
+    <a href="contact.html" class="lang-btn">AR</a>
+    <a href="contact-fr.html" class="lang-btn">FR</a>
+  </div>
+</header>
 
-  <!-- 📞 Formulaire de contact -->
-  <section class="contact-form">
-    <h2>Contactez-nous</h2>
-    <p>Remplissez le formulaire ci-dessous et notre équipe vous contactera dans les plus brefs délais.</p>
+<section class="contact-form">
+  <h2>Contactez-nous</h2>
+  <form action="https://formspree.io/f/mzzjqjog" method="POST">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="_replyto" placeholder="Votre email" required>
+    <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
 
-    <form action="#" method="post">
-      <input type="text" name="nom" placeholder="Nom complet" required>
-      <input type="email" name="email" placeholder="Adresse e-mail" required>
-      <input type="tel" name="telephone" placeholder="Numéro de téléphone">
-      <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+<footer>
+  <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
+  <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
+  <p>📞 +212 661 865 316 (Maroc)</p>
+  <p>📞 +32 487 491 576 (Belgique)</p>
+  <p>📧 minatravel2019@gmail.com</p>
+</footer>
 
-  <!-- 🌙 Pied de page -->
-  <footer>
-    <p><strong>Bureau au Maroc :</strong> Avenue Hassan II, Témara Centre 12000</p>
-    <p><strong>Bureau en Belgique :</strong> Rue de Fiennes 46, 1070 Anderlecht</p>
-    <p>📞 <span class="ltr">+212 661 865 316</span> (Maroc)</p>
-    <p>📞 <span class="ltr">+32 487 491 576</span> (Belgique)</p>
-    <p>📧 minatravel2019@gmail.com</p>
-  </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.opacity = "1";
+  });
+</script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "1";
-    });
-  </script>
 </body>
 </html>
