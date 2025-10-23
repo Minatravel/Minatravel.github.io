@@ -54,14 +54,8 @@ header .logo-container {
 }
 
 header .logo-container img {
-  height: 100px;              /* Le logo sera plus grand */
+  height: 85px;
   width: auto;
-  background: white;          /* Fond blanc derrière le logo */
-  border-radius: 8px;         /* Bords arrondis (optionnel) */
-  box-shadow: 0 2px 8px #888888;  /* Ombre légère (optionnel) */
-  padding: 5px;               /* Espace autour du logo (optionnel) */
-}
-
 }
 
 header h1 {
@@ -263,6 +257,4 @@ footer {
   margin-top: 2rem;
   font-size: 0.9rem;
 }
-
-
 
