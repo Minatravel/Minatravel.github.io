@@ -54,7 +54,7 @@ header .logo-container {
 }
 
 header .logo-container img {
-  height: 65px;
+  height: 100px;
   width: auto;
 }
 
@@ -257,3 +257,4 @@ footer {
   margin-top: 2rem;
   font-size: 0.9rem;
 }
+
